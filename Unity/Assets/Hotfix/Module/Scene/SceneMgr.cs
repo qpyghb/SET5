@@ -1,10 +1,11 @@
 ﻿using ETModel;
+using System;
 
 namespace ETHotfix
 {
 	public static class SceneMgr
 	{
-		public static async void LoadScene(string sceneName)
+		public static async ETVoid LoadScene(string sceneName, Action onLoaded = null)
 		{
 			// 加载场景资源
 			await ETModel.Game.Scene.GetComponent<ResourcesComponent>().LoadBundleAsync(sceneName.StringToAB());
@@ -13,6 +14,8 @@ namespace ETHotfix
 			{
 				await sceneChangeComponent.ChangeSceneAsync(sceneName);
 			}
+
+			onLoaded?.Invoke();
 		}
 	}
 }
