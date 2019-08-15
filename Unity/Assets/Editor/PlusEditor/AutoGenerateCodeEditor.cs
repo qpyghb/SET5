@@ -113,8 +113,21 @@ namespace " + scriptNamespace +
 		}
 	}
 
-	" +
-		$"public class {className}: Component" +
+	[ObjectSystem]
+" +
+		$"	public class {className}DestroySystem : DestroySystem<{className}>" +
+		@"
+	{
+" +
+		$"		public override void Destroy({className} self)" +
+		@"
+		{
+			self.OnDestroy();
+		}
+	}
+
+" +
+		$"	public class {className}: Component" +
 		@"
 	{
 		public void Awake()
@@ -128,6 +141,11 @@ namespace " + scriptNamespace +
 		}
 
 		public void Update()
+		{
+
+		}
+
+		public void OnDestroy()
 		{
 
 		}
