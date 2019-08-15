@@ -40,10 +40,6 @@ namespace ETPlus
 
 			// 获取脚本类型， 这决定生成的脚本样式
 			ScriptType scriptType = GetScriptType(className);
-			if (scriptType == ScriptType.Other)
-			{
-				return;
-			}
 
 			string scriptNamespace = "";
 			string eachNamespace = "";
@@ -163,6 +159,18 @@ namespace " + scriptNamespace +
 }
 "
 							);
+					}
+					else
+					{
+						sw.WriteLine($"using {eachNamespace};");
+						sw.WriteLine();
+						sw.WriteLine($"namespace {scriptNamespace}");
+						sw.WriteLine("{");
+						sw.WriteLine($"	public class {className}");
+						sw.WriteLine("	{");
+						sw.WriteLine();
+						sw.WriteLine("	}");
+						sw.WriteLine("}");
 					}
 				}
 			}
