@@ -93,6 +93,7 @@
     <Compile Include="Assets\Hotfix\Module\Config\ACategory.cs" />
     <Compile Include="Assets\Hotfix\Module\Config\ConfigComponent.cs" />
     <Compile Include="Assets\Hotfix\Module\Config\ConfigHelper.cs" />
+    <Compile Include="Assets\Hotfix\Module\Config\ConfigMgr.cs" />
     <Compile Include="Assets\Hotfix\Module\Config\IConfig.cs" />
     <Compile Include="Assets\Hotfix\Module\Demo\Config\UnitConfig.cs" />
     <Compile Include="Assets\Hotfix\Module\Demo\G2C_TestHotfixHandler.cs" />
@@ -121,10 +122,12 @@
     <Compile Include="Assets\Hotfix\Module\Message\OpcodeTypeComponent.cs" />
     <Compile Include="Assets\Hotfix\Module\Message\Session.cs" />
     <Compile Include="Assets\Hotfix\Module\Message\SessionComponent.cs" />
+    <Compile Include="Assets\Hotfix\Module\Scene\SceneMgr.cs" />
     <Compile Include="Assets\Hotfix\Module\UI\IUIFactory.cs" />
     <Compile Include="Assets\Hotfix\Module\UI\UI.cs" />
     <Compile Include="Assets\Hotfix\Module\UI\UIComponent.cs" />
     <Compile Include="Assets\Hotfix\Module\UI\UIFactory.cs" />
+    <Compile Include="Assets\Hotfix\Module\UI\UIMgr.cs" />
     <Compile Include="Assets\Hotfix\Module\UI\UIType.cs" />
     <None Include="Assets\Hotfix\Unity.Hotfix.asmdef" />
     <Reference Include="UnityEngine.AIModule">
