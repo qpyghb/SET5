@@ -182,9 +182,6 @@ namespace " + scriptNamespace +
 					{
 						string configName = className.Replace("Config", "");
 
-						// 添加EventIdType
-						AddConfigType(configName, scriptNamespace);
-
 						// 生成事件脚本
 						sw.WriteLine($"using {eachNamespace};");
 						sw.WriteLine();
@@ -204,6 +201,21 @@ namespace " + scriptNamespace +
 }
 "
 );
+						// 写入配置文件
+						using (FileStream configFile = new FileStream($"Assets/Res/Config/{className}.txt", FileMode.Create, FileAccess.ReadWrite, FileShare.ReadWrite))
+						{
+							using (StreamWriter configWriter = new StreamWriter(configFile, System.Text.Encoding.UTF8))
+							{
+								configWriter.Write(@"{""Id"" : 1}");
+							}
+						}
+
+						// 加入到Config.prefab
+						GameObject configPrefab = AssetDatabase.LoadAssetAtPath<GameObject>("Assets/Bundles/Independent/Config.prefab");
+						ReferenceCollector collector = configPrefab.GetComponent<ReferenceCollector>();
+						TextAsset configTxt = AssetDatabase.LoadAssetAtPath<TextAsset>(configPath);
+						collector.Add(className, configTxt);
+						AssetDatabase.Refresh();
 					}
 					else
 					{
@@ -221,56 +233,6 @@ namespace " + scriptNamespace +
 			}
 
 			AssetDatabase.Refresh();
-		}
-
-		/// <summary>
-		/// 添加一个配置类型
-		/// </summary>
-		/// <param name="configName">配置名</param>
-		/// <param name="scriptNamespace">脚本命名空间</param>
-		private static void AddConfigType(string configName, string scriptNamespace)
-		{
-			string path = "Assets/Hotfix/Module/Plus/Config/ConfigType.cs";
-			if (scriptNamespace == "ETModel")
-			{
-				path = "Assets/Model/Base/Event/EventIdType.cs";
-			}
-			string text = File.ReadAllText(path);
-
-			// 使用正则匹配到所有EventName
-			string pattern = "([A-Za-z0-9_]+),";
-			MatchCollection matchs = Regex.Matches(text, pattern);
-
-			// 添加一个EventIdType
-			using (FileStream fs = new FileStream(path, FileMode.Truncate, FileAccess.ReadWrite, FileShare.ReadWrite))
-			{
-				using (StreamWriter sw = new StreamWriter(fs, System.Text.Encoding.UTF8))
-				{
-					sw.Write(
-$"namespace {scriptNamespace}" +
-@"
-{
-	public enum ConfigType
-	{
-");
-					// 把原来的写上
-					for (int i = 0; i < matchs.Count; i++)
-					{
-						string matchName = matchs[i].Groups[1].Value;
-						if (matchName == configName)
-						{
-							Debug.LogError($"已经存在配置名:{configName}, 请检查代码.");
-							continue;
-						}
-						sw.WriteLine($"		{matchName},");
-					}
-					sw.WriteLine($"		{configName},");
-					sw.Write(
-@"	}
-}
-");
-				}
-			}
 		}
 
 		/// <summary>
