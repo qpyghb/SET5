@@ -54,9 +54,15 @@ namespace ETHotfix
 
 		public void Start()
 		{
+			// 动画
 			tipText.transform.DOLocalMoveY(300f, 0.6f).From(200f);
-			DoFade().Coroutine();
-			AutoClose().Coroutine();
+			tipText.DoFade(600, new Color(1f, 1f, 1f, 0.3f), Color.white).Coroutine();
+
+			// 自动关闭
+			this.Delay(1200, () =>
+			{
+				UIUtil.ClosePanel("TipPanel");
+			}).Coroutine();
 		}
 
 		public void Update()
@@ -72,26 +78,6 @@ namespace ETHotfix
 		public void SetTip(string tip)
 		{
 			tipText.text = tip;
-		}
-
-		private async ETVoid DoFade()
-		{
-			Color targetColor = new Color(1f, 1f, 1f, 1f);
-			Color fromColor = new Color(1f, 1f, 1f, 0.3f);
-			tipText.color = fromColor;
-			for (int i = 0; i < 60; i++)
-			{
-				if (tipText == null) return;
-
-				tipText.color = (fromColor + targetColor) * i / 60;
-				await ETModel.Game.Scene.GetComponent<TimerComponent>().WaitAsync(600 / 60);
-			}
-		}
-
-		private async ETVoid AutoClose()
-		{
-			await ETModel.Game.Scene.GetComponent<TimerComponent>().WaitAsync(1000);
-			UIMgr.ClosePanel("TipPanel");
 		}
 	}
 }

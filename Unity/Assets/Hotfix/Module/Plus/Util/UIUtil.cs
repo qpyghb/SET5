@@ -32,5 +32,13 @@ namespace ETHotfix
 			Game.Scene.GetComponent<UIComponent>().Remove(uiName);
 			ETModel.Game.Scene.GetComponent<ResourcesComponent>().UnloadBundle(uiName.StringToAB());
 		}
+
+		public static void CloseAllPanel()
+		{
+			foreach (var uiName in uiNameList)
+			{
+				ClosePanel(uiName);
+			}
+		}
 	}
 }
