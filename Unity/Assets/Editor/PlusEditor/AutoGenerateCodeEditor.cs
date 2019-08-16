@@ -235,7 +235,7 @@ namespace " + scriptNamespace +
 			{
 				using (StreamWriter configWriter = new StreamWriter(configFile, System.Text.Encoding.UTF8))
 				{
-					configWriter.Write(@"{""Id"" : 1,}");
+					configWriter.Write(@"{""Id"" : 1}");
 				}
 			}
 
