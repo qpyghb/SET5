@@ -4,6 +4,8 @@ using UnityEditor;
 using UnityEngine;
 using System.Text.RegularExpressions;
 using System.IO;
+using ETModel;
+using System.Threading.Tasks;
 
 namespace ETPlus
 {
@@ -201,21 +203,7 @@ namespace " + scriptNamespace +
 }
 "
 );
-						// 写入配置文件
-						using (FileStream configFile = new FileStream($"Assets/Res/Config/{className}.txt", FileMode.Create, FileAccess.ReadWrite, FileShare.ReadWrite))
-						{
-							using (StreamWriter configWriter = new StreamWriter(configFile, System.Text.Encoding.UTF8))
-							{
-								configWriter.Write(@"{""Id"" : 1}");
-							}
-						}
-
-						// 加入到Config.prefab
-						GameObject configPrefab = AssetDatabase.LoadAssetAtPath<GameObject>("Assets/Bundles/Independent/Config.prefab");
-						ReferenceCollector collector = configPrefab.GetComponent<ReferenceCollector>();
-						TextAsset configTxt = AssetDatabase.LoadAssetAtPath<TextAsset>(configPath);
-						collector.Add(className, configTxt);
-						AssetDatabase.Refresh();
+						CreateConfigTxt(className).Coroutine();
 					}
 					else
 					{
@@ -235,6 +223,32 @@ namespace " + scriptNamespace +
 			AssetDatabase.Refresh();
 		}
 
+		/// <summary>
+		/// 创建配置文本
+		/// </summary>
+		/// <param name="className">类名</param>
+		private static async ETVoid CreateConfigTxt(string className)
+		{
+			// 写入配置文件
+			string configPath = $"Assets/Res/Config/{className}.txt";
+			using (FileStream configFile = new FileStream(configPath, FileMode.Create, FileAccess.ReadWrite, FileShare.ReadWrite))
+			{
+				using (StreamWriter configWriter = new StreamWriter(configFile, System.Text.Encoding.UTF8))
+				{
+					configWriter.Write(@"{""Id"" : 1,}");
+				}
+			}
+
+			// 为了保证创建并刷新配置文件
+			await Task.Delay(100);
+
+			// 加入到Config.prefab
+			GameObject configPrefab = AssetDatabase.LoadAssetAtPath<GameObject>("Assets/Bundles/Independent/Config.prefab");
+			ReferenceCollector collector = configPrefab.GetComponent<ReferenceCollector>();
+			TextAsset configTxt = AssetDatabase.LoadAssetAtPath<TextAsset>(configPath);
+			collector.Add(className, configTxt);
+		}
+		
 		/// <summary>
 		/// 添加一个EventIdType
 		/// </summary>
