@@ -2,7 +2,7 @@
 
 namespace ETHotfix
 {
-	public static class ConfigMgr
+	public static class ConfigUtil
 	{
 		public static T GetConfig<T>(int id) where T : IConfig
 		{

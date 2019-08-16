@@ -1,13 +1,23 @@
 ﻿using ETModel;
+using System.Collections.Generic;
 
 namespace ETHotfix
 {
-	public static class UIMgr
+	public static class UIUtil
 	{
-		public static void OpenPanel<T>(string uiName) where T : Component, new()
+		private static List<string> uiNameList = new List<string>();
+
+		public static T OpenPanel<T>(string uiName) where T : Component, new()
 		{
+			if (uiNameList.Contains(uiName))
+			{
+				return null;
+			}
+			uiNameList.Add(uiName);
+
 			UI ui = UIFactory.Create<T>(uiName);
 			Game.Scene.GetComponent<UIComponent>().Add(ui);
+			return ui.GetComponent<T>();
 		}
 
 		public static T GetPanel<T>(string uiName) where T : Component, new()
@@ -17,6 +27,8 @@ namespace ETHotfix
 
 		public static void ClosePanel(string uiName)
 		{
+			uiNameList.Remove(uiName);
+
 			Game.Scene.GetComponent<UIComponent>().Remove(uiName);
 			ETModel.Game.Scene.GetComponent<ResourcesComponent>().UnloadBundle(uiName.StringToAB());
 		}

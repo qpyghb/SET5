@@ -3,7 +3,7 @@ using System;
 
 namespace ETHotfix
 {
-	public static class SceneMgr
+	public static class SceneUtil
 	{
 		public static async ETVoid LoadScene(string sceneName, Action onLoaded = null)
 		{

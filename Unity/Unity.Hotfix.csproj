@@ -122,6 +122,7 @@
     <Compile Include="Assets\Hotfix\Module\Message\OpcodeTypeComponent.cs" />
     <Compile Include="Assets\Hotfix\Module\Message\Session.cs" />
     <Compile Include="Assets\Hotfix\Module\Message\SessionComponent.cs" />
+    <Compile Include="Assets\Hotfix\Module\Plus\Component\TipPanelComponent.cs" />
     <Compile Include="Assets\Hotfix\Module\Scene\SceneMgr.cs" />
     <Compile Include="Assets\Hotfix\Module\UI\IUIFactory.cs" />
     <Compile Include="Assets\Hotfix\Module\UI\UI.cs" />
