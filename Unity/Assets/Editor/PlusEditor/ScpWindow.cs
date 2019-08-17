@@ -98,7 +98,7 @@ namespace ETPlus
 									return;
 								}
 
-								string arguments = $"-r {localBundlePath} {username}@{serverIP}:{serverBundlePath}/{platformName}";
+								string arguments = $"-r {localBundlePath} {username}@{serverIP}:{serverBundlePath}";
 
 								Debug.Log($"同步服务器资源, 命令: scp {arguments}");
 								ProcessHelper.Run("scp", arguments);
