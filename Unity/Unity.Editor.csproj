@@ -112,6 +112,7 @@
     <Compile Include="Assets\Editor\ILRuntimeEditor\ILRuntimeCLRBinding.cs" />
     <Compile Include="Assets\Editor\PlusEditor\AutoGenerateCodeEditor.cs" />
     <Compile Include="Assets\Editor\PlusEditor\BundleMarkEditor.cs" />
+    <Compile Include="Assets\Editor\PlusEditor\ScpWindow.cs" />
     <Compile Include="Assets\Editor\Proto2CsEditor\InnerProto2CS.cs" />
     <Compile Include="Assets\Editor\Proto2CsEditor\Proto2CSEditor.cs" />
     <Compile Include="Assets\Editor\ReferenceCollectorEditor\ReferenceCollectorEditor.cs" />
