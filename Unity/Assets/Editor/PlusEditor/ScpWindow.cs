@@ -7,6 +7,7 @@ using ETEditor;
 using Debug = UnityEngine.Debug;
 using System.IO;
 using System;
+using ETModel;
 
 namespace ETPlus
 {
@@ -100,7 +101,7 @@ namespace ETPlus
 								string arguments = $"-r {localBundlePath} {username}@{serverIP}:{serverBundlePath}/{platformName}";
 
 								Debug.Log($"同步服务器资源, 命令: scp {arguments}");
-								RunScpCommand("scp", arguments);
+								ProcessHelper.Run("scp", arguments);
 							}
 						}
 					}
@@ -109,19 +110,6 @@ namespace ETPlus
 				GUILayout.EndVertical();
 			}
 			GUILayout.EndScrollView();
-		}
-
-		private void RunScpCommand(string exeName, string exeArgs)
-		{
-			using (Process process = new Process())
-			{
-				process.StartInfo = new ProcessStartInfo(exeName, exeArgs);
-				process.StartInfo.UseShellExecute = false;
-				process.StartInfo.RedirectStandardOutput = true;
-				process.StartInfo.RedirectStandardInput = true;
-				process.StartInfo.RedirectStandardError = true;
-				process.Start();
-			}
 		}
 	}
 }
