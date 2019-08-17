@@ -35,7 +35,7 @@ namespace ETHotfix
 				Game.Scene.AddComponent<ConfigComponent>();
 				ETModel.Game.Scene.GetComponent<ResourcesComponent>().UnloadBundle("config.unity3d");
 
-				Log.Debug($"config {ConfigUtil.GetJson<HumanConfig>(2001)}");
+				Log.Debug($"config {ConfigUtil.GetJson<TestConfig>(2001)}");
 
 				Game.EventSystem.Run(EventIdType.InitSceneStart);
 			}
