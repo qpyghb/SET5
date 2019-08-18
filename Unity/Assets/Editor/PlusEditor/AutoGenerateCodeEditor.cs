@@ -69,6 +69,7 @@ namespace ETPlus
 					// 起头
 					if (scriptType == ScriptType.Component)
 					{
+						string parentClassName = className.EndsWith("Component") ? "Component" : "Entity";
 						sw.Write(
 $"using {eachNamespace};" +
 @"
@@ -130,7 +131,7 @@ namespace " + scriptNamespace +
 	}
 
 " +
-		$"	public class {className}: Component" +
+		$"	public class {className} : {parentClassName}" +
 		@"
 	{
 		public void Awake()
@@ -305,7 +306,7 @@ $"namespace {scriptNamespace}" +
 		/// <returns>脚本类型</returns>
 		private static ScriptType GetScriptType(string className)
 		{
-			if (className.EndsWith("Component"))
+			if (className.EndsWith("Component") || className.EndsWith("Entity"))
 			{
 				return ScriptType.Component;
 			}
