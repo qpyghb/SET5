@@ -16,7 +16,8 @@ namespace ETPlus
 			Other,
 			Component,
 			Event,
-			Config
+			Config,
+			Factory
 		}
 
 		/// <summary>
@@ -166,6 +167,7 @@ namespace " + scriptNamespace +
 
 						// 生成事件脚本
 						sw.WriteLine($"using {eachNamespace};");
+						sw.WriteLine("using UnityEngine;");
 						sw.WriteLine();
 						sw.WriteLine($"namespace {scriptNamespace}");
 						sw.WriteLine("{");
@@ -206,9 +208,26 @@ namespace " + scriptNamespace +
 );
 						CreateConfigTxt(className).Coroutine();
 					}
+					else if (scriptType == ScriptType.Factory)
+					{
+						sw.WriteLine($"using {eachNamespace};");
+						sw.WriteLine("using UnityEngine;");
+						sw.WriteLine();
+						sw.WriteLine($"namespace {scriptNamespace}");
+						sw.WriteLine("{");
+						sw.WriteLine($"	public static class {className}");
+						sw.WriteLine("	{");
+						sw.WriteLine($"		public static {className.Replace("Factory", "")} Create()");
+						sw.WriteLine("		{");
+						sw.WriteLine("			return null;");
+						sw.WriteLine("		}");
+						sw.WriteLine("	}");
+						sw.WriteLine("}");
+					}
 					else
 					{
 						sw.WriteLine($"using {eachNamespace};");
+						sw.WriteLine("using UnityEngine;");
 						sw.WriteLine();
 						sw.WriteLine($"namespace {scriptNamespace}");
 						sw.WriteLine("{");
@@ -313,6 +332,10 @@ $"namespace {scriptNamespace}" +
 			else if (className.EndsWith("Event"))
 			{
 				return ScriptType.Event;
+			}
+			else if (className.EndsWith("Factory"))
+			{
+				return ScriptType.Factory;
 			}
 			else if (className.EndsWith("Config"))
 			{
