@@ -6,42 +6,42 @@ using DG.Tweening;
 namespace ETHotfix
 {
 	[ObjectSystem]
-	public class TipPanelComponentAwakeSystem : AwakeSystem<TipPanelComponent>
+	public class TipPanelEntityAwakeSystem : AwakeSystem<TipPanelEntity>
 	{
-		public override void Awake(TipPanelComponent self)
+		public override void Awake(TipPanelEntity self)
 		{
 			self.Awake();
 		}
 	}
 
 	[ObjectSystem]
-	public class TipPanelComponentStartSystem : StartSystem<TipPanelComponent>
+	public class TipPanelEntityStartSystem : StartSystem<TipPanelEntity>
 	{
-		public override void Start(TipPanelComponent self)
+		public override void Start(TipPanelEntity self)
 		{
 			self.Start();
 		}
 	}
 
 	[ObjectSystem]
-	public class TipPanelComponentUpdateSystem : UpdateSystem<TipPanelComponent>
+	public class TipPanelEntityUpdateSystem : UpdateSystem<TipPanelEntity>
 	{
-		public override void Update(TipPanelComponent self)
+		public override void Update(TipPanelEntity self)
 		{
 			self.Update();
 		}
 	}
 
 	[ObjectSystem]
-	public class TipPanelComponentDestroySystem : DestroySystem<TipPanelComponent>
+	public class TipPanelEntityDestroySystem : DestroySystem<TipPanelEntity>
 	{
-		public override void Destroy(TipPanelComponent self)
+		public override void Destroy(TipPanelEntity self)
 		{
 			self.OnDestroy();
 		}
 	}
 
-	public class TipPanelComponent: Component
+	public class TipPanelEntity : Entity
 	{
 		private ReferenceCollector mCollector;
 		private Text tipText;

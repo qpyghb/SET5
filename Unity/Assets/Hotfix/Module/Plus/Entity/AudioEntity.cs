@@ -4,42 +4,42 @@ using UnityEngine;
 namespace ETHotfix
 {
 	[ObjectSystem]
-	public class AudioComponentAwakeSystem : AwakeSystem<AudioComponent>
+	public class AudioEntityAwakeSystem : AwakeSystem<AudioEntity>
 	{
-		public override void Awake(AudioComponent self)
+		public override void Awake(AudioEntity self)
 		{
 			self.Awake();
 		}
 	}
 
 	[ObjectSystem]
-	public class AudioComponentStartSystem : StartSystem<AudioComponent>
+	public class AudioEntityStartSystem : StartSystem<AudioEntity>
 	{
-		public override void Start(AudioComponent self)
+		public override void Start(AudioEntity self)
 		{
 			self.Start();
 		}
 	}
 
 	[ObjectSystem]
-	public class AudioComponentUpdateSystem : UpdateSystem<AudioComponent>
+	public class AudioEntityUpdateSystem : UpdateSystem<AudioEntity>
 	{
-		public override void Update(AudioComponent self)
+		public override void Update(AudioEntity self)
 		{
 			self.Update();
 		}
 	}
 
 	[ObjectSystem]
-	public class AudioComponentDestroySystem : DestroySystem<AudioComponent>
+	public class AudioEntityDestroySystem : DestroySystem<AudioEntity>
 	{
-		public override void Destroy(AudioComponent self)
+		public override void Destroy(AudioEntity self)
 		{
 			self.OnDestroy();
 		}
 	}
 
-	public class AudioComponent: Component
+	public class AudioEntity : Entity
 	{
 		private string mBGMName = "";
 
