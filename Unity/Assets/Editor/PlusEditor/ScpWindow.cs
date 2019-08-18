@@ -16,6 +16,7 @@ namespace ETPlus
 		private static Vector2 scrollPos = Vector2.zero;
 		private static string serverIP = "119.23.241.65";
 		private static string username = "root";
+		private static string serverProgramPath = "/root/ET";
 		private static string serverBundlePath = "/var/www/html/ET";
 		private static PlatformType platformType = PlatformType.None;
 
@@ -60,6 +61,39 @@ namespace ETPlus
 						username = GUILayout.TextField(username, GUILayout.Width(250));
 					}
 					GUILayout.EndHorizontal();
+
+					GUILayout.Space(20);
+
+					// 同步热更程序
+					GUILayout.BeginVertical("box", GUILayout.Width(400), GUILayout.Height(50));
+					{
+						// 服务器程序地址
+						GUILayout.BeginHorizontal();
+						{
+							GUILayout.Label("服务器程序地址:");
+							serverProgramPath = GUILayout.TextField(serverProgramPath, GUILayout.Width(250));
+						}
+						GUILayout.EndHorizontal();
+
+						GUILayout.Space(20);
+
+						if (GUILayout.Button("同步程序"))
+						{
+							Debug.Log("同步程序");
+							string localProgramPath = Application.dataPath.Replace("Unity/Assets", $"Bin/publish");
+							if (Directory.Exists(localProgramPath) == false)
+							{
+								Debug.LogError($"不存在路径: {localProgramPath}, 请检查是否 dotnet push ?");
+								return;
+							}
+
+							string arguments = $"-r {localProgramPath} {username}@{serverIP}:{serverProgramPath}";
+
+							Debug.Log($"同步服务器程序, 命令: scp {arguments}");
+							ProcessHelper.Run("scp", arguments);
+						}
+					}
+					GUILayout.EndVertical();
 
 					GUILayout.Space(20);
 
