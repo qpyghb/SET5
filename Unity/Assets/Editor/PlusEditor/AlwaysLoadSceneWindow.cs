@@ -11,6 +11,7 @@ namespace ETPlus
 	public class AlwaysLoadSceneWindowData
 	{
 		public string initSceneName = "Init";
+		public bool isEnabled = true;
 	}
 
 	public class AlwaysLoadSceneWindow : EditorWindow
@@ -36,6 +37,7 @@ namespace ETPlus
 			else
 			{
 				this.data = new AlwaysLoadSceneWindowData();
+				Save();
 			}
 		}
 
@@ -46,18 +48,34 @@ namespace ETPlus
 				GUILayout.BeginHorizontal();
 				{
 					GUILayout.Label("初始场景:");
-					GUILayout.FlexibleSpace();
 					string currentName = GUILayout.TextField(data.initSceneName, GUILayout.Width(200));
 					if (currentName != data.initSceneName)
 					{
 						data.initSceneName = currentName;
-						File.WriteAllText(path, JsonHelper.ToJson(this.data));
-						AssetDatabase.Refresh();
+						Save();
+					}
+				}
+				GUILayout.EndHorizontal();
+
+				GUILayout.BeginHorizontal();
+				{
+					GUILayout.Label("是否启用:");
+					bool currentEnabled = EditorGUILayout.Toggle(data.isEnabled);
+					if (currentEnabled != data.isEnabled)
+					{
+						data.isEnabled = currentEnabled;
+						Save();
 					}
 				}
 				GUILayout.EndHorizontal();
 			}
 			GUILayout.EndVertical();
+		}
+
+		private void Save()
+		{
+			File.WriteAllText(path, JsonHelper.ToJson(this.data));
+			AssetDatabase.Refresh();
 		}
 
 		[RuntimeInitializeOnLoadMethod]
@@ -66,7 +84,7 @@ namespace ETPlus
 			if (File.Exists(path))
 			{
 				AlwaysLoadSceneWindowData data = JsonHelper.FromJson<AlwaysLoadSceneWindowData>(File.ReadAllText(path));
-				if (string.IsNullOrEmpty(data.initSceneName) == false)
+				if (data.isEnabled == true && string.IsNullOrEmpty(data.initSceneName) == false)
 				{
 					if (SceneManager.GetActiveScene().name != data.initSceneName)
 					{

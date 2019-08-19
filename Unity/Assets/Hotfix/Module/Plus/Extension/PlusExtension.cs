@@ -42,5 +42,16 @@ namespace ETHotfix
 		}
 
 		#endregion
+
+		#region Texture2D
+
+		public static Sprite ToSprite(this Texture2D self)
+		{
+			Sprite sprite = Sprite.Create(self, new Rect(0f, 0f, self.width, self.height), Vector2.one * 0.5f);
+			sprite.name = self.name;
+			return sprite;
+		}
+
+		#endregion
 	}
 }
