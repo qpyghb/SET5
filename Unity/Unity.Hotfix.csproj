@@ -122,8 +122,9 @@
     <Compile Include="Assets\Hotfix\Module\Message\OpcodeTypeComponent.cs" />
     <Compile Include="Assets\Hotfix\Module\Message\Session.cs" />
     <Compile Include="Assets\Hotfix\Module\Message\SessionComponent.cs" />
-    <Compile Include="Assets\Hotfix\Module\Plus\Component\AudioComponent.cs" />
-    <Compile Include="Assets\Hotfix\Module\Plus\Component\TipPanelComponent.cs" />
+    <Compile Include="Assets\Hotfix\Module\Plus\Entity\AudioEntity.cs" />
+    <Compile Include="Assets\Hotfix\Module\Plus\Entity\NumericEntity.cs" />
+    <Compile Include="Assets\Hotfix\Module\Plus\Entity\TipPanelEntity.cs" />
     <Compile Include="Assets\Hotfix\Module\Plus\Extension\PlusExtension.cs" />
     <Compile Include="Assets\Hotfix\Module\Plus\UI\UIFactory.cs" />
     <Compile Include="Assets\Hotfix\Module\Plus\Util\ConfigUtil.cs" />

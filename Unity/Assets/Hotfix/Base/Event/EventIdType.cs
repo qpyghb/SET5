@@ -5,6 +5,6 @@
 		public const string InitSceneStart = "InitSceneStart";
 		public const string LoginFinish = "LoginFinish";
 		public const string EnterMapFinish = "EnterMapFinish";
-		public const string Hello = "Hello";
+		public const string NumericChange = "NumericChange";
 	}
 }
