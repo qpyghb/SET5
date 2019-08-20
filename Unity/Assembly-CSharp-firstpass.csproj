@@ -288,6 +288,9 @@
     <Reference Include="UnityEngine.SpatialTracking">
       <HintPath>C:/Program Files/Unity/Hub/Editor/2018.4.6f1/Editor/Data/UnityExtensions/Unity/UnitySpatialTracking/RuntimeEditor/UnityEngine.SpatialTracking.dll</HintPath>
     </Reference>
+    <Reference Include="PandaBehaviour">
+      <HintPath>C:/Users/su/Documents/Respositories/ET-Plus/Unity/Assets/Model/Module/PandaBehaviour/Core/PandaBehaviour.dll</HintPath>
+    </Reference>
     <Reference Include="ICSharpCode.SharpZipLib">
       <HintPath>C:/Users/su/Documents/Respositories/ET-Plus/Unity/Assets/Plugins/ICSharpCode.SharpZipLib.dll</HintPath>
     </Reference>

@@ -37,6 +37,8 @@ namespace ETHotfix
 
 				Log.Debug($"config {ConfigUtil.GetJson<TestConfig>(2001)}");
 
+				UIUtil.OpenPanel<TipPanelEntity>(UIType.TipPanel)?.SetTip("提示信息");
+
 				Game.EventSystem.Run(EventIdType.InitSceneStart);
 			}
 			catch (Exception e)

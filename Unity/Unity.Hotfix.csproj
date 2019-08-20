@@ -125,6 +125,8 @@
     <Compile Include="Assets\Hotfix\Module\Plus\Entity\AudioEntity.cs" />
     <Compile Include="Assets\Hotfix\Module\Plus\Entity\NumericEntity.cs" />
     <Compile Include="Assets\Hotfix\Module\Plus\Entity\TipPanelEntity.cs" />
+    <Compile Include="Assets\Hotfix\Module\Plus\Event\EventMgr.cs" />
+    <Compile Include="Assets\Hotfix\Module\Plus\Event\EventType.cs" />
     <Compile Include="Assets\Hotfix\Module\Plus\Extension\PlusExtension.cs" />
     <Compile Include="Assets\Hotfix\Module\Plus\UI\UIFactory.cs" />
     <Compile Include="Assets\Hotfix\Module\Plus\Util\ConfigUtil.cs" />
@@ -369,6 +371,12 @@
     </Reference>
     <Reference Include="SyntaxTree.VisualStudio.Unity.Bridge">
       <HintPath>C:/Program Files (x86)/Microsoft Visual Studio Tools for Unity/16.0/Editor/SyntaxTree.VisualStudio.Unity.Bridge.dll</HintPath>
+    </Reference>
+    <Reference Include="PandaBehaviourEditor">
+      <HintPath>C:/Users/su/Documents/Respositories/ET-Plus/Unity/Assets/Editor/PandaBehaviourEditor/PandaBehaviourEditor.dll</HintPath>
+    </Reference>
+    <Reference Include="PandaBehaviour">
+      <HintPath>C:/Users/su/Documents/Respositories/ET-Plus/Unity/Assets/Model/Module/PandaBehaviour/Core/PandaBehaviour.dll</HintPath>
     </Reference>
     <Reference Include="ICSharpCode.SharpZipLib">
       <HintPath>C:/Users/su/Documents/Respositories/ET-Plus/Unity/Assets/Plugins/ICSharpCode.SharpZipLib.dll</HintPath>

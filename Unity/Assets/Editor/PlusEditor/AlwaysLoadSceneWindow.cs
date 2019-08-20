@@ -19,7 +19,7 @@ namespace ETPlus
 		private const string path = @"./Assets/Res/Config/AlwaysLoadSceneWindowData.txt";
 		private AlwaysLoadSceneWindowData data;
 
-		[MenuItem("Tools/Plus/Start Scene #s", priority = 0)]
+		[MenuItem("Tools/Plus/Start Scene", priority = 0)]
 		private static void ShowWindow()
 		{
 			AlwaysLoadSceneWindow window = EditorWindow.GetWindow<AlwaysLoadSceneWindow>() as AlwaysLoadSceneWindow;

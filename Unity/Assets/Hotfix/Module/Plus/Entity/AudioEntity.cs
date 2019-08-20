@@ -70,7 +70,7 @@ namespace ETHotfix
 		/// 播放一段声音
 		/// </summary>
 		/// <param name="soundName">声音名</param>
-		public void PlayOneShot(string soundName)
+		public void PlaySound(string soundName)
 		{
 			mAudioSource.PlayOneShot(ResourceUtil.Load<AudioClip>(soundName));
 			ResourceUtil.Unload(soundName);
