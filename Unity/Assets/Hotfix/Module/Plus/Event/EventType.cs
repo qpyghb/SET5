@@ -5,6 +5,6 @@ namespace ETHotfix
 {
 	public class EventType
 	{
-		public const string HelloEvent = "HelloEvent";
+
 	}
 }

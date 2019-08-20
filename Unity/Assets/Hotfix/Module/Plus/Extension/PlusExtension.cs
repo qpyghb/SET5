@@ -53,5 +53,24 @@ namespace ETHotfix
 		}
 
 		#endregion
+
+		#region object
+
+		public static void Register(this object self, string eventName)
+		{
+			EventMgr.Register(self, eventName);
+		}
+
+		public static void Send(this object self, string eventName, params object[] args)
+		{
+			EventMgr.Send(eventName, args);
+		}
+
+		public static object[] Call(this object self, string eventName, params object[] args)
+		{
+			return EventMgr.Call(eventName, args);
+		}
+
+		#endregion
 	}
 }

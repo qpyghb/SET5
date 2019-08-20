@@ -55,27 +55,6 @@ namespace ETHotfix
 		}
 
 		/// <summary>
-		/// 注销指定对象的所有方法
-		/// </summary>
-		/// <param name="obj">对象</param>
-		public static void Deregister(object obj)
-		{
-			// 是否Enumerator进行迭代
-			var iter = eventDic.GetEnumerator();
-			while (iter.MoveNext())
-			{
-				List<MethodData> methodDataList = iter.Current.Value;
-				for (int i = 0; i < methodDataList.Count; i++)
-				{
-					if (obj == methodDataList[i].obj)
-					{
-						methodDataList.RemoveAt(i);
-					}
-				}
-			}
-		}
-
-		/// <summary>
 		/// 发送事件
 		/// </summary>
 		/// <param name="eventName">事件名</param>
@@ -91,9 +70,9 @@ namespace ETHotfix
 		/// <param name="eventName">事件名</param>
 		/// <param name="args">参数</param>
 		/// <returns>事件返回值列表</returns>
-		public static List<object> Call(string eventName, params object[] args)
+		public static object[] Call(string eventName, params object[] args)
 		{
-			return Invoke(eventName, true, args);
+			return Invoke(eventName, true, args).ToArray();
 		}
 
 		// 返回的数据
@@ -134,12 +113,33 @@ namespace ETHotfix
 						methodData.method.Invoke(methodData.obj, args);
 					}
 				}
-				catch (Exception e)
+				catch (Exception)
 				{
-					Debug.LogError($"此方法({methodData.method.DeclaringType.FullName})，出错信息: {e.ToString()}");
+					Deregister(methodData.obj);
 				}
 			}
 			return returnObjects;
+		}
+
+		/// <summary>
+		/// 注销指定对象的所有方法
+		/// </summary>
+		/// <param name="obj">对象</param>
+		private static void Deregister(object obj)
+		{
+			// 是否Enumerator进行迭代
+			var iter = eventDic.GetEnumerator();
+			while (iter.MoveNext())
+			{
+				List<MethodData> methodDataList = iter.Current.Value;
+				for (int i = 0; i < methodDataList.Count; i++)
+				{
+					if (obj == methodDataList[i].obj)
+					{
+						methodDataList.RemoveAt(i);
+					}
+				}
+			}
 		}
 
 		/// <summary>
