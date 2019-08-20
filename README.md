@@ -162,3 +162,8 @@ SceneUtil.LoadScene("Map", () =>
 
 - 这里用的是商店里面的 `Panda BT Tree`, 免费的行为树里面是比较好使的，行为树在txt文件里面编辑，更多可以看案例，用起来是非常简单的
 
+
+
+## 9. 快速标记AssetBundle
+
+-  在Project下，右键资源点击`@标记 - AssetBudnel`就可以标记或取消标记
