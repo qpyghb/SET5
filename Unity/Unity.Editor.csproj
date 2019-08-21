@@ -110,8 +110,9 @@
     <Compile Include="Assets\Editor\GlobalConfigEditor\GlobalConfigEditor.cs" />
     <Compile Include="Assets\Editor\Helper\EditorResHelper.cs" />
     <Compile Include="Assets\Editor\ILRuntimeEditor\ILRuntimeCLRBinding.cs" />
-    <Compile Include="Assets\Editor\PandaBehaviourEditor\CreatePandaScriptMenu.cs" />
-    <Compile Include="Assets\Editor\PandaBehaviourEditor\PandaBehaviourEditor.cs" />
+    <Compile Include="Assets\Editor\IngameConsoleEditor\DebugLogManagerEditor.cs" />
+    <Compile Include="Assets\Editor\NPBehaveEditor\DebuggerEditor.cs" />
+    <Compile Include="Assets\Editor\NPBehaveEditor\DebuggerWindow.cs" />
     <Compile Include="Assets\Editor\PlusEditor\AlwaysLoadSceneWindow.cs" />
     <Compile Include="Assets\Editor\PlusEditor\AutoGenerateCodeEditor.cs" />
     <Compile Include="Assets\Editor\PlusEditor\BundleMarkEditor.cs" />
@@ -360,12 +361,6 @@
     </Reference>
     <Reference Include="SyntaxTree.VisualStudio.Unity.Bridge">
       <HintPath>C:/Program Files (x86)/Microsoft Visual Studio Tools for Unity/16.0/Editor/SyntaxTree.VisualStudio.Unity.Bridge.dll</HintPath>
-    </Reference>
-    <Reference Include="PandaBehaviourEditor">
-      <HintPath>C:/Users/su/Documents/Respositories/ET-Plus/Unity/Assets/Editor/PandaBehaviourEditor/PandaBehaviourEditor.dll</HintPath>
-    </Reference>
-    <Reference Include="PandaBehaviour">
-      <HintPath>C:/Users/su/Documents/Respositories/ET-Plus/Unity/Assets/Model/Module/PandaBehaviour/Core/PandaBehaviour.dll</HintPath>
     </Reference>
     <Reference Include="ICSharpCode.SharpZipLib">
       <HintPath>C:/Users/su/Documents/Respositories/ET-Plus/Unity/Assets/Plugins/ICSharpCode.SharpZipLib.dll</HintPath>

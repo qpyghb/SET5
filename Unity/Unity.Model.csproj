@@ -324,6 +324,17 @@
     <Compile Include="Assets\Model\Module\Filter\FilterComponent.cs" />
     <Compile Include="Assets\Model\Module\Filter\FilterEntity.cs" />
     <Compile Include="Assets\Model\Module\Filter\IFilter.cs" />
+    <Compile Include="Assets\Model\Module\IngameDebugConsole\Scripts\CircularBuffer.cs" />
+    <Compile Include="Assets\Model\Module\IngameDebugConsole\Scripts\ConsoleMethodAttribute.cs" />
+    <Compile Include="Assets\Model\Module\IngameDebugConsole\Scripts\DebugLogConsole.cs" />
+    <Compile Include="Assets\Model\Module\IngameDebugConsole\Scripts\DebugLogEntry.cs" />
+    <Compile Include="Assets\Model\Module\IngameDebugConsole\Scripts\DebugLogIndexList.cs" />
+    <Compile Include="Assets\Model\Module\IngameDebugConsole\Scripts\DebugLogItem.cs" />
+    <Compile Include="Assets\Model\Module\IngameDebugConsole\Scripts\DebugLogLogcatListener.cs" />
+    <Compile Include="Assets\Model\Module\IngameDebugConsole\Scripts\DebugLogManager.cs" />
+    <Compile Include="Assets\Model\Module\IngameDebugConsole\Scripts\DebugLogPopup.cs" />
+    <Compile Include="Assets\Model\Module\IngameDebugConsole\Scripts\DebugLogRecycledListView.cs" />
+    <Compile Include="Assets\Model\Module\IngameDebugConsole\Scripts\DebugsOnScrollListener.cs" />
     <Compile Include="Assets\Model\Module\Message\AMHandler.cs" />
     <Compile Include="Assets\Model\Module\Message\ErrorCode.cs" />
     <Compile Include="Assets\Model\Module\Message\IMessage.cs" />
@@ -362,6 +373,43 @@
     <Compile Include="Assets\Model\Module\Message\RpcException.cs" />
     <Compile Include="Assets\Model\Module\Message\Session.cs" />
     <Compile Include="Assets\Model\Module\Message\SessionCallbackComponent.cs" />
+    <Compile Include="Assets\Model\Module\NPBehave\Blackboard.cs" />
+    <Compile Include="Assets\Model\Module\NPBehave\Clock.cs" />
+    <Compile Include="Assets\Model\Module\NPBehave\Composite\Composite.cs" />
+    <Compile Include="Assets\Model\Module\NPBehave\Composite\Parallel.cs" />
+    <Compile Include="Assets\Model\Module\NPBehave\Composite\RandomSelector.cs" />
+    <Compile Include="Assets\Model\Module\NPBehave\Composite\RandomSequence.cs" />
+    <Compile Include="Assets\Model\Module\NPBehave\Composite\Selector.cs" />
+    <Compile Include="Assets\Model\Module\NPBehave\Composite\Sequence.cs" />
+    <Compile Include="Assets\Model\Module\NPBehave\Container.cs" />
+    <Compile Include="Assets\Model\Module\NPBehave\Debugger.cs" />
+    <Compile Include="Assets\Model\Module\NPBehave\Decorator\BlackboardCondition.cs" />
+    <Compile Include="Assets\Model\Module\NPBehave\Decorator\BlackboardQuery.cs" />
+    <Compile Include="Assets\Model\Module\NPBehave\Decorator\Condition.cs" />
+    <Compile Include="Assets\Model\Module\NPBehave\Decorator\Cooldown.cs" />
+    <Compile Include="Assets\Model\Module\NPBehave\Decorator\Decorator.cs" />
+    <Compile Include="Assets\Model\Module\NPBehave\Decorator\Failer.cs" />
+    <Compile Include="Assets\Model\Module\NPBehave\Decorator\Inverter.cs" />
+    <Compile Include="Assets\Model\Module\NPBehave\Decorator\Observer.cs" />
+    <Compile Include="Assets\Model\Module\NPBehave\Decorator\ObservingDecorator.cs" />
+    <Compile Include="Assets\Model\Module\NPBehave\Decorator\Random.cs" />
+    <Compile Include="Assets\Model\Module\NPBehave\Decorator\Repeater.cs" />
+    <Compile Include="Assets\Model\Module\NPBehave\Decorator\Service.cs" />
+    <Compile Include="Assets\Model\Module\NPBehave\Decorator\Succeeder.cs" />
+    <Compile Include="Assets\Model\Module\NPBehave\Decorator\TimeMax.cs" />
+    <Compile Include="Assets\Model\Module\NPBehave\Decorator\TimeMin.cs" />
+    <Compile Include="Assets\Model\Module\NPBehave\Decorator\WaitForCondition.cs" />
+    <Compile Include="Assets\Model\Module\NPBehave\Exception.cs" />
+    <Compile Include="Assets\Model\Module\NPBehave\Node.cs" />
+    <Compile Include="Assets\Model\Module\NPBehave\Operator.cs" />
+    <Compile Include="Assets\Model\Module\NPBehave\Root.cs" />
+    <Compile Include="Assets\Model\Module\NPBehave\Stops.cs" />
+    <Compile Include="Assets\Model\Module\NPBehave\Task\Action.cs" />
+    <Compile Include="Assets\Model\Module\NPBehave\Task\NavMoveTo.cs" />
+    <Compile Include="Assets\Model\Module\NPBehave\Task\Task.cs" />
+    <Compile Include="Assets\Model\Module\NPBehave\Task\Wait.cs" />
+    <Compile Include="Assets\Model\Module\NPBehave\Task\WaitUntilStopped.cs" />
+    <Compile Include="Assets\Model\Module\NPBehave\UnityContext.cs" />
     <Compile Include="Assets\Model\Module\Numeric\INumericWatcher.cs" />
     <Compile Include="Assets\Model\Module\Numeric\NumericChangeEvent_NotifyWatcher.cs" />
     <Compile Include="Assets\Model\Module\Numeric\NumericComponent.cs" />
@@ -369,24 +417,6 @@
     <Compile Include="Assets\Model\Module\Numeric\NumericWatcher_Hp_ShowUI.cs" />
     <Compile Include="Assets\Model\Module\Numeric\NumericWatcherAttribute.cs" />
     <Compile Include="Assets\Model\Module\Numeric\NumericWatcherComponent.cs" />
-    <Compile Include="Assets\Model\Module\PandaBehaviour\Core\PandaBehaviour.cs" />
-    <Compile Include="Assets\Model\Module\PandaBehaviour\Examples\00_ChangeColor\Assets\MyCube.cs" />
-    <Compile Include="Assets\Model\Module\PandaBehaviour\Examples\01_Move\Assets\Move.cs" />
-    <Compile Include="Assets\Model\Module\PandaBehaviour\Examples\02_PlayTag\Assets\Computer.cs" />
-    <Compile Include="Assets\Model\Module\PandaBehaviour\Examples\02_PlayTag\Assets\Dialogue.cs" />
-    <Compile Include="Assets\Model\Module\PandaBehaviour\Examples\02_PlayTag\Assets\Player.cs" />
-    <Compile Include="Assets\Model\Module\PandaBehaviour\Examples\03_Shooter\Assets\AI.cs" />
-    <Compile Include="Assets\Model\Module\PandaBehaviour\Examples\03_Shooter\Assets\AIVision.cs" />
-    <Compile Include="Assets\Model\Module\PandaBehaviour\Examples\03_Shooter\Assets\Bullet.cs" />
-    <Compile Include="Assets\Model\Module\PandaBehaviour\Examples\03_Shooter\Assets\BulletImpact.cs" />
-    <Compile Include="Assets\Model\Module\PandaBehaviour\Examples\03_Shooter\Assets\FollowCamera.cs" />
-    <Compile Include="Assets\Model\Module\PandaBehaviour\Examples\03_Shooter\Assets\HUD.cs" />
-    <Compile Include="Assets\Model\Module\PandaBehaviour\Examples\03_Shooter\Assets\Patroller.cs" />
-    <Compile Include="Assets\Model\Module\PandaBehaviour\Examples\03_Shooter\Assets\ShooterGameController.cs" />
-    <Compile Include="Assets\Model\Module\PandaBehaviour\Examples\03_Shooter\Assets\TriggerType.cs" />
-    <Compile Include="Assets\Model\Module\PandaBehaviour\Examples\03_Shooter\Assets\Unit.cs" />
-    <Compile Include="Assets\Model\Module\PandaBehaviour\Examples\03_Shooter\Assets\UnitExplosion.cs" />
-    <Compile Include="Assets\Model\Module\PandaBehaviour\Examples\03_Shooter\Assets\WaypointPath.cs" />
     <Compile Include="Assets\Model\Module\Pathfinding\AstarPathfindingProject\Behaviors\AIDestinationSetter.cs" />
     <Compile Include="Assets\Model\Module\Pathfinding\AstarPathfindingProject\Behaviors\Patrol.cs" />
     <Compile Include="Assets\Model\Module\Pathfinding\AstarPathfindingProject\changelog.cs" />
@@ -522,27 +552,13 @@
     <Compile Include="Assets\Model\Other\MonoStaticMethod.cs" />
     <Compile Include="Assets\Model\Other\MotionType.cs" />
     <Compile Include="Assets\Model\Other\ReferenceCollector.cs" />
-    <None Include="Assets\Model\Module\PandaBehaviour\Examples\03_Shooter\Assets\Patroller.BT.txt" />
-    <None Include="Assets\Model\Module\PandaBehaviour\Examples\01_Move\Assets\Move.BT.txt" />
-    <None Include="Assets\Model\Module\PandaBehaviour\Examples\02_PlayTag\Assets\TagDialogue.BT.txt" />
-    <None Include="Assets\Model\Module\PandaBehaviour\Core\PandaBehaviour.xml" />
-    <None Include="Assets\Model\Module\PandaBehaviour\README.txt" />
-    <None Include="Assets\Model\Module\PandaBehaviour\Examples\03_Shooter\Assets\Player.BT.txt" />
-    <None Include="Assets\Model\Module\PandaBehaviour\Examples\03_Shooter\Assets\Sniper.BT.txt" />
-    <None Include="Assets\Model\Module\PandaBehaviour\Examples\00_ChangeColor\Assets\ChangeColor.BT.txt" />
-    <None Include="Assets\Model\Module\PandaBehaviour\Examples\03_Shooter\Assets\Hunter.BT.txt" />
-    <None Include="Assets\Model\Module\PandaBehaviour\Examples\03_Shooter\Assets\AI.BT.lib.txt" />
+    <None Include="Assets\Model\Module\IngameDebugConsole\README.txt" />
     <None Include="Assets\Model\Module\Pathfinding\AstarPathfindingProject\ExampleScenes\Materials\DiffuseAlwaysVisible.shader" />
     <None Include="Assets\Model\Module\Pathfinding\AstarPathfindingProject\ExampleScenes\_Example Scenes.txt" />
-    <None Include="Assets\Model\Module\PandaBehaviour\Examples\02_PlayTag\Assets\Computer.BT.txt" />
-    <None Include="Assets\Model\Module\PandaBehaviour\Examples\03_Shooter\Assets\GameController.BT.txt" />
     <None Include="Assets\Model\Module\Pathfinding\AstarPathfindingProject\Readme_upgrading.txt" />
     <None Include="Assets\Model\Module\Pathfinding\AstarPathfindingProject\ExampleScenes\Materials\Projector Light.shader" />
     <None Include="Assets\Model\Module\Pathfinding\AstarPathfindingProject\Readme.txt" />
-    <None Include="Assets\Model\Module\PandaBehaviour\Examples\02_PlayTag\Assets\PlayTag.commented.BT.txt" />
     <None Include="Assets\Model\Unity.Model.asmdef" />
-    <None Include="Assets\Model\Module\PandaBehaviour\Examples\02_PlayTag\Assets\PlayTag.BT.txt" />
-    <None Include="Assets\Model\Module\PandaBehaviour\ChangeLog.txt" />
     <None Include="Assets\Model\Module\Pathfinding\AstarPathfindingProject\link.xml" />
     <Reference Include="UnityEngine.AIModule">
       <HintPath>C:/Program Files/Unity/Hub/Editor/2018.4.6f1/Editor/Data/Managed/UnityEngine/UnityEngine.AIModule.dll</HintPath>
@@ -765,12 +781,6 @@
     </Reference>
     <Reference Include="SyntaxTree.VisualStudio.Unity.Bridge">
       <HintPath>C:/Program Files (x86)/Microsoft Visual Studio Tools for Unity/16.0/Editor/SyntaxTree.VisualStudio.Unity.Bridge.dll</HintPath>
-    </Reference>
-    <Reference Include="PandaBehaviourEditor">
-      <HintPath>C:/Users/su/Documents/Respositories/ET-Plus/Unity/Assets/Editor/PandaBehaviourEditor/PandaBehaviourEditor.dll</HintPath>
-    </Reference>
-    <Reference Include="PandaBehaviour">
-      <HintPath>C:/Users/su/Documents/Respositories/ET-Plus/Unity/Assets/Model/Module/PandaBehaviour/Core/PandaBehaviour.dll</HintPath>
     </Reference>
     <Reference Include="ICSharpCode.SharpZipLib">
       <HintPath>C:/Users/su/Documents/Respositories/ET-Plus/Unity/Assets/Plugins/ICSharpCode.SharpZipLib.dll</HintPath>

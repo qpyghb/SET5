@@ -67,20 +67,8 @@
     <Compile Include="Assets\Plugins\Demigiant\DOTween\Modules\DOTweenModuleUI.cs" />
     <Compile Include="Assets\Plugins\Demigiant\DOTween\Modules\DOTweenModuleUnityVersion.cs" />
     <Compile Include="Assets\Plugins\Demigiant\DOTween\Modules\DOTweenModuleUtils.cs" />
-    <Compile Include="Assets\Plugins\IngameDebugConsole\Scripts\CircularBuffer.cs" />
-    <Compile Include="Assets\Plugins\IngameDebugConsole\Scripts\ConsoleMethodAttribute.cs" />
-    <Compile Include="Assets\Plugins\IngameDebugConsole\Scripts\DebugLogConsole.cs" />
-    <Compile Include="Assets\Plugins\IngameDebugConsole\Scripts\DebugLogEntry.cs" />
-    <Compile Include="Assets\Plugins\IngameDebugConsole\Scripts\DebugLogIndexList.cs" />
-    <Compile Include="Assets\Plugins\IngameDebugConsole\Scripts\DebugLogItem.cs" />
-    <Compile Include="Assets\Plugins\IngameDebugConsole\Scripts\DebugLogLogcatListener.cs" />
-    <Compile Include="Assets\Plugins\IngameDebugConsole\Scripts\DebugLogManager.cs" />
-    <Compile Include="Assets\Plugins\IngameDebugConsole\Scripts\DebugLogPopup.cs" />
-    <Compile Include="Assets\Plugins\IngameDebugConsole\Scripts\DebugLogRecycledListView.cs" />
-    <Compile Include="Assets\Plugins\IngameDebugConsole\Scripts\DebugsOnScrollListener.cs" />
     <None Include="Assets\Plugins\AstarPathfindingProject\DotNetZip\DotNetZipLicense.txt" />
     <None Include="Assets\Plugins\AstarPathfindingProject\Poly2Tri\Poly2TriLicense.txt" />
-    <None Include="Assets\Plugins\IngameDebugConsole\README.txt" />
     <None Include="Assets\Plugins\AstarPathfindingProject\dependencies.txt" />
     <None Include="Assets\Plugins\AstarPathfindingProject\Clipper\ClipperLicense.txt" />
     <None Include="Assets\Plugins\Demigiant\DOTween\readme.txt" />
@@ -287,9 +275,6 @@
     </Reference>
     <Reference Include="UnityEngine.SpatialTracking">
       <HintPath>C:/Program Files/Unity/Hub/Editor/2018.4.6f1/Editor/Data/UnityExtensions/Unity/UnitySpatialTracking/RuntimeEditor/UnityEngine.SpatialTracking.dll</HintPath>
-    </Reference>
-    <Reference Include="PandaBehaviour">
-      <HintPath>C:/Users/su/Documents/Respositories/ET-Plus/Unity/Assets/Model/Module/PandaBehaviour/Core/PandaBehaviour.dll</HintPath>
     </Reference>
     <Reference Include="ICSharpCode.SharpZipLib">
       <HintPath>C:/Users/su/Documents/Respositories/ET-Plus/Unity/Assets/Plugins/ICSharpCode.SharpZipLib.dll</HintPath>

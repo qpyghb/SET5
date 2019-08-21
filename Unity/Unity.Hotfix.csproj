@@ -372,12 +372,6 @@
     <Reference Include="SyntaxTree.VisualStudio.Unity.Bridge">
       <HintPath>C:/Program Files (x86)/Microsoft Visual Studio Tools for Unity/16.0/Editor/SyntaxTree.VisualStudio.Unity.Bridge.dll</HintPath>
     </Reference>
-    <Reference Include="PandaBehaviourEditor">
-      <HintPath>C:/Users/su/Documents/Respositories/ET-Plus/Unity/Assets/Editor/PandaBehaviourEditor/PandaBehaviourEditor.dll</HintPath>
-    </Reference>
-    <Reference Include="PandaBehaviour">
-      <HintPath>C:/Users/su/Documents/Respositories/ET-Plus/Unity/Assets/Model/Module/PandaBehaviour/Core/PandaBehaviour.dll</HintPath>
-    </Reference>
     <Reference Include="ICSharpCode.SharpZipLib">
       <HintPath>C:/Users/su/Documents/Respositories/ET-Plus/Unity/Assets/Plugins/ICSharpCode.SharpZipLib.dll</HintPath>
     </Reference>

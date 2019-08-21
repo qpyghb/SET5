@@ -158,9 +158,11 @@ SceneUtil.LoadScene("Map", () =>
 
 - 在`Plugins/Demigiant`里，这里是免费版，够我用了
 
-### 8.4 行为树
+### 8.4 行为树 - NPBehave
 
-- 这里用的是商店里面的 `Panda BT Tree`, 免费的行为树里面是比较好使的，行为树在txt文件里面编辑，更多可以看案例，用起来是非常简单的
+- 在烟雨的博客看到的
+
+- 如果是帧同步行为树只需要在Unity, 如果是状态同步行为树需要用在服务端，NPBehave不依赖于MonoBehaviour
 
 
 
