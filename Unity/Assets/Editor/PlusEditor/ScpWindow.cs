@@ -25,7 +25,7 @@ namespace ETPlus
 		private const string path = @"./Assets/Res/Config/ScpWindowData.txt";
 		private ScpWindowData scpWindowData;
 
-		[MenuItem("Tools/Plus/Scp Window #s", priority = 0)]
+		[MenuItem("Tools/Plus/Scp Window #s", priority = 1)]
 		private static void ShowWindow()
 		{
 			ScpWindow scpWindow = EditorWindow.GetWindow<ScpWindow>() as ScpWindow;
@@ -51,6 +51,16 @@ namespace ETPlus
 			// 内容
 			GUILayout.BeginVertical("box", GUILayout.Width(400), GUILayout.Height(250));
 			{
+				GUILayout.Space(5);
+				GUILayout.BeginHorizontal();
+				{
+					GUILayout.FlexibleSpace();
+					GUILayout.Label("SCP同步工具");
+					GUILayout.FlexibleSpace();
+				}
+				GUILayout.EndHorizontal();
+				GUILayout.Space(5);
+
 				// IP地址输入框
 				GUILayout.BeginHorizontal();
 				{
@@ -67,7 +77,7 @@ namespace ETPlus
 				// 用户名输入框
 				GUILayout.BeginHorizontal();
 				{
-					GUILayout.Label("username:");
+					GUILayout.Label("用户名:");
 					string currentUsername = GUILayout.TextField(scpWindowData.username, GUILayout.Width(250));
 					if (scpWindowData.username != currentUsername)
 					{

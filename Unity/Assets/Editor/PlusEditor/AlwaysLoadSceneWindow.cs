@@ -45,6 +45,16 @@ namespace ETPlus
 		{
 			GUILayout.BeginVertical("box", GUILayout.Width(300));
 			{
+				GUILayout.Space(5);
+				GUILayout.BeginHorizontal();
+				{
+					GUILayout.FlexibleSpace();
+					GUILayout.Label("起始场景设置");
+					GUILayout.FlexibleSpace();
+				}
+				GUILayout.EndHorizontal();
+				GUILayout.Space(5);
+
 				GUILayout.BeginHorizontal();
 				{
 					GUILayout.Label("初始场景:");
