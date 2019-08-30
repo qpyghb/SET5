@@ -1,5 +1,6 @@
 ﻿using UnityEditor;
 using System.IO;
+using UnityEngine;
 
 namespace ETPlus
 {
@@ -77,11 +78,30 @@ namespace ETPlus
 		}
 
 
-		[MenuItem(Mark_AssetBundle)]
+		[MenuItem(Mark_AssetBundle, false, 10000)]
 		public static void MarkPTABDir()
 		{
 			var path = GetSelectedPathOrFallback();
 			MarkPTAB(path);
+		}
+
+		[MenuItem(Mark_AssetBundle, true, 10000)]
+		public static bool MarkPTABDir_Check()
+		{
+			string path = GetSelectedPathOrFallback();
+			if (string.IsNullOrEmpty(path) == false)
+			{
+				if (path.Split('.').Length == 1)
+				{
+					return false;
+				}
+				else if (path.EndsWith(".cs"))
+				{
+					return false;
+				}
+			}
+
+			return true;
 		}
 
 		public static string GetSelectedPathOrFallback()
