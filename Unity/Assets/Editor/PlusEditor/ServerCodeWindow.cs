@@ -34,7 +34,7 @@ namespace ETPlus
 		private const string savePath = @"./Assets/Res/Config/ServerCodeWindowData.txt";
 		private ServerCodeWindowData data;
 
-		[MenuItem("Tools/Plus/Server Code", priority = 2)]
+		// [MenuItem("Tools/Plus/Server Code", priority = 2)]
 		private static void ShowWindow()
 		{
 			ServerCodeWindow window = EditorWindow.GetWindow<ServerCodeWindow>() as ServerCodeWindow;

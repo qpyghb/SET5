@@ -122,13 +122,16 @@
     <Compile Include="Assets\Hotfix\Module\Message\OpcodeTypeComponent.cs" />
     <Compile Include="Assets\Hotfix\Module\Message\Session.cs" />
     <Compile Include="Assets\Hotfix\Module\Message\SessionComponent.cs" />
+    <Compile Include="Assets\Hotfix\Module\Plus\Data\Vector3Data.cs" />
     <Compile Include="Assets\Hotfix\Module\Plus\Entity\AudioEntity.cs" />
     <Compile Include="Assets\Hotfix\Module\Plus\Entity\NumericEntity.cs" />
     <Compile Include="Assets\Hotfix\Module\Plus\Entity\TipPanelEntity.cs" />
+    <Compile Include="Assets\Hotfix\Module\Plus\Entity\UnitEntity.cs" />
     <Compile Include="Assets\Hotfix\Module\Plus\Event\EventMgr.cs" />
     <Compile Include="Assets\Hotfix\Module\Plus\Event\EventType.cs" />
     <Compile Include="Assets\Hotfix\Module\Plus\Extension\PlusExtension.cs" />
-    <Compile Include="Assets\Hotfix\Module\Plus\UI\UIFactory.cs" />
+    <Compile Include="Assets\Hotfix\Module\Plus\Factory\UIFactory.cs" />
+    <Compile Include="Assets\Hotfix\Module\Plus\Factory\UnitEntityFactory.cs" />
     <Compile Include="Assets\Hotfix\Module\Plus\Util\ConfigUtil.cs" />
     <Compile Include="Assets\Hotfix\Module\Plus\Util\ResourceUtil.cs" />
     <Compile Include="Assets\Hotfix\Module\Plus\Util\SceneUtil.cs" />

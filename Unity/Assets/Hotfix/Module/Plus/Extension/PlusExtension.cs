@@ -43,17 +43,6 @@ namespace ETHotfix
 
 		#endregion
 
-		#region Texture2D
-
-		public static Sprite ToSprite(this Texture2D self)
-		{
-			Sprite sprite = Sprite.Create(self, new Rect(0f, 0f, self.width, self.height), Vector2.one * 0.5f);
-			sprite.name = self.name;
-			return sprite;
-		}
-
-		#endregion
-
 		#region object
 
 		public static void Register(this object self, string eventName)
@@ -69,6 +58,21 @@ namespace ETHotfix
 		public static object[] Call(this object self, string eventName, params object[] args)
 		{
 			return EventMgr.Call(eventName, args);
+		}
+
+		#endregion
+
+		#region GameObject
+
+		public static GameObject Instantiate(this GameObject self)
+		{
+			return GameObject.Instantiate(self);
+		}
+
+		public static GameObject Position(this GameObject self, Vector3 pos)
+		{
+			self.transform.position = pos;
+			return self;
 		}
 
 		#endregion
