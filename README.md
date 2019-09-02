@@ -102,7 +102,7 @@ SceneUtil.LoadScene("Map", () =>
       }
       
       void OnDestroy() {
-      	  this.Deregister();
+      	this.Deregister();
       }
       
       public void Jump() {
