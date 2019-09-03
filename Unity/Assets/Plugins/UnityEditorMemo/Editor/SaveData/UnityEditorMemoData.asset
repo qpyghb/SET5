@@ -1,0 +1,181 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4ce8bdfcf897b964ba106732d7f64fcc, type: 3}
+  m_Name: UnityEditorMemoData
+  m_EditorClassIdentifier: 
+  Category:
+  - Name: default
+    MenuDepth: 0
+    Memo:
+    - m_ID: 0
+      m_Name: 
+      m_Depth: -1
+      Date: 2019/9/3 11:15
+      Memo: 
+      URL: 
+      Label: 0
+      Tex: 0
+      ObjectRef:
+        Obj: {fileID: 0}
+        ScenePath: 
+        LocalIdentifierInFile: 0
+      IsEdit: 0
+  - Name: ET-Plus
+    MenuDepth: 0
+    Memo:
+    - m_ID: 0
+      m_Name: 
+      m_Depth: -1
+      Date: 2019/9/3 11:17
+      Memo: 
+      URL: 
+      Label: 0
+      Tex: 0
+      ObjectRef:
+        Obj: {fileID: 0}
+        ScenePath: 
+        LocalIdentifierInFile: 0
+      IsEdit: 0
+    - m_ID: 1
+      m_Name: "\u5728Project\u4E0B\u7684\u8D44\u6E90, \u53F3\u952E(\u9664\u6587\u4EF6\u5939\u548C\u811A\u672C)\u90FD\u53EF\u4EE5\u70B9\u51FB
+        \"@\u6807\u8BB0 - AssetBundle\" \u5FEB\u901F\u6807\u8BB0AssetBudnel\u548C\u5220\u9664"
+      m_Depth: 0
+      Date: 2019/9/3 11:19
+      Memo: "\u5728Project\u4E0B\u7684\u8D44\u6E90, \u53F3\u952E(\u9664\u6587\u4EF6\u5939\u548C\u811A\u672C)\u90FD\u53EF\u4EE5\u70B9\u51FB
+        \"@\u6807\u8BB0 - AssetBundle\" \u5FEB\u901F\u6807\u8BB0AssetBudnel\u548C\u5220\u9664"
+      URL: 
+      Label: 4
+      Tex: 1
+      ObjectRef:
+        Obj: {fileID: 11500000, guid: 1b0f83250197ad7478e394f413c535c6, type: 3}
+        ScenePath: 
+        LocalIdentifierInFile: 0
+      IsEdit: 0
+    - m_ID: 2
+      m_Name: "\u6302\u8F7D\u6709`ReferenceCollector`\u7684\u6E38\u620F\u5BF9\u8C61\u7684\u5B50\u5BF9\u8C61\u53EF\u4EE5\u6302\u4E0A`GOMark`,
+        \u5F53\u4F60\u70B9\u51FB`@\u5237\u65B0 - GameObject`\u65F6, \u5C31\u53EF\u4EE5\u81EA\u52A8\u6DFB\u52A0`GameObject`,
+        \u65B9\u4FBF\u66F4\u6539"
+      m_Depth: 0
+      Date: 2019/9/3 11:22
+      Memo: "\u6302\u8F7D\u6709`ReferenceCollector`\u7684\u6E38\u620F\u5BF9\u8C61\u7684\u5B50\u5BF9\u8C61\u53EF\u4EE5\u6302\u4E0A`GOMark`,
+        \u5F53\u4F60\u70B9\u51FB`@\u5237\u65B0 - GameObject`\u65F6, \u5C31\u53EF\u4EE5\u81EA\u52A8\u6DFB\u52A0`GameObject`,
+        \u65B9\u4FBF\u66F4\u6539"
+      URL: 
+      Label: 4
+      Tex: 1
+      ObjectRef:
+        Obj: {fileID: 11500000, guid: 12241e6f0977d1c4da94fdd5d2d50d9b, type: 3}
+        ScenePath: 
+        LocalIdentifierInFile: 0
+      IsEdit: 0
+    - m_ID: 3
+      m_Name: "\u6253\u5F00`Start Scene`\u7A97\u53E3, \u53EF\u4EE5\u8BBE\u7F6E\u5165\u53E3\u573A\u666F,
+        \u4E00\u822C\u4E3A`Init`, \u53EF\u4EE5\u5173\u95ED\u6B64\u529F\u80FD"
+      m_Depth: 0
+      Date: 2019/9/3 11:24
+      Memo: "\u6253\u5F00`Start Scene`\u7A97\u53E3, \u53EF\u4EE5\u8BBE\u7F6E\u5165\u53E3\u573A\u666F,
+        \u4E00\u822C\u4E3A`Init`, \u53EF\u4EE5\u5173\u95ED\u6B64\u529F\u80FD"
+      URL: 
+      Label: 4
+      Tex: 1
+      ObjectRef:
+        Obj: {fileID: 11500000, guid: 47961fa3049509742919ec362c6d585a, type: 3}
+        ScenePath: 
+        LocalIdentifierInFile: 0
+      IsEdit: 0
+    - m_ID: 4
+      m_Name: Cmd
+      m_Depth: 0
+      Date: 2019/9/3 11:24
+      Memo: Cmd
+      URL: cmd
+      Label: 5
+      Tex: 1
+      ObjectRef:
+        Obj: {fileID: 0}
+        ScenePath: 
+        LocalIdentifierInFile: 0
+      IsEdit: 0
+    - m_ID: 5
+      m_Name: "\u767E\u5EA6"
+      m_Depth: 0
+      Date: 2019/9/3 11:25
+      Memo: "\u767E\u5EA6"
+      URL: https://www.baidu.com
+      Label: 5
+      Tex: 1
+      ObjectRef:
+        Obj: {fileID: 0}
+        ScenePath: 
+        LocalIdentifierInFile: 0
+      IsEdit: 0
+    - m_ID: 6
+      m_Name: Google
+      m_Depth: 0
+      Date: 2019/9/3 11:26
+      Memo: Google
+      URL: https://www.google.com
+      Label: 5
+      Tex: 1
+      ObjectRef:
+        Obj: {fileID: 0}
+        ScenePath: 
+        LocalIdentifierInFile: 0
+      IsEdit: 0
+    - m_ID: 7
+      m_Name: "Google\u7FFB\u8BD1"
+      m_Depth: 0
+      Date: 2019/9/3 11:27
+      Memo: "Google\u7FFB\u8BD1"
+      URL: https://translate.google.cn/
+      Label: 5
+      Tex: 1
+      ObjectRef:
+        Obj: {fileID: 0}
+        ScenePath: 
+        LocalIdentifierInFile: 0
+      IsEdit: 0
+    - m_ID: 8
+      m_Name: "\u5F53\u524D\u6587\u4EF6\u5939"
+      m_Depth: 0
+      Date: 2019/9/3 11:32
+      Memo: Assets
+      URL: file:./Assets
+      Label: 5
+      Tex: 0
+      ObjectRef:
+        Obj: {fileID: 0}
+        ScenePath: 
+        LocalIdentifierInFile: 0
+      IsEdit: 0
+  - Name: Game
+    MenuDepth: 0
+    Memo:
+    - m_ID: 0
+      m_Name: 
+      m_Depth: -1
+      Date: 2019/9/3 11:20
+      Memo: 
+      URL: 
+      Label: 0
+      Tex: 0
+      ObjectRef:
+        Obj: {fileID: 0}
+        ScenePath: 
+        LocalIdentifierInFile: 0
+      IsEdit: 0
+  LabelTag:
+  - 
+  - 
+  - 
+  - 
+  - 

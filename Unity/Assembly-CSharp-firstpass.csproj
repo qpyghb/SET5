@@ -69,6 +69,7 @@
     <Compile Include="Assets\Plugins\Demigiant\DOTween\Modules\DOTweenModuleUtils.cs" />
     <None Include="Assets\Plugins\AstarPathfindingProject\DotNetZip\DotNetZipLicense.txt" />
     <None Include="Assets\Plugins\AstarPathfindingProject\Poly2Tri\Poly2TriLicense.txt" />
+    <None Include="Assets\Plugins\UnityEditorMemo\README.txt" />
     <None Include="Assets\Plugins\AstarPathfindingProject\dependencies.txt" />
     <None Include="Assets\Plugins\AstarPathfindingProject\Clipper\ClipperLicense.txt" />
     <None Include="Assets\Plugins\Demigiant\DOTween\readme.txt" />
@@ -662,6 +663,10 @@
     <ProjectReference Include="Unity.Model.csproj">
       <Project>{B4BF9894-F5D9-41C4-13E3-3F26F7700E29}</Project>
       <Name>Unity.Model</Name>
+    </ProjectReference>
+    <ProjectReference Include="UnityEditorMemo.Editor.csproj">
+      <Project>{5A121F60-E7DC-5A7A-82FD-312400056516}</Project>
+      <Name>UnityEditorMemo.Editor</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

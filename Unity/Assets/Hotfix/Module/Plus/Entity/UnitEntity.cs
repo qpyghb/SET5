@@ -88,11 +88,16 @@ namespace ETHotfix
 		public void Remove(long id)
 		{
 			Entity unit;
-			this.idUnits.TryGetValue(id, out unit);
+			idUnits.TryGetValue(id, out unit);
 			if (unit != null)
 			{
-				this.idUnits.Remove(id);
+				unit.GameObject?.Destroy();
 				unit?.Dispose();
+				idUnits.Remove(id);
+			}
+			else
+			{
+				Debug.LogError($"不存在Unit: {id}");
 			}
 		}
 

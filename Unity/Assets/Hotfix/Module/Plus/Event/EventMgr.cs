@@ -125,7 +125,7 @@ namespace ETHotfix
 		/// 注销指定对象的所有方法
 		/// </summary>
 		/// <param name="obj">对象</param>
-		private static void Deregister(object obj)
+		public static void Deregister(object obj)
 		{
 			// 是否Enumerator进行迭代
 			var iter = eventDic.GetEnumerator();

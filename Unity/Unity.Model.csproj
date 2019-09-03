@@ -537,7 +537,12 @@
     <Compile Include="Assets\Model\Module\Pathfinding\Recast\ThreadControlQueue.cs" />
     <Compile Include="Assets\Model\Module\Pathfinding\Recast\TriangleMeshNode.cs" />
     <Compile Include="Assets\Model\Module\Pathfinding\Recast\WindowsStoreCompatibility.cs" />
+    <Compile Include="Assets\Model\Module\Plus\Entity\EventEntity.cs" />
+    <Compile Include="Assets\Model\Module\Plus\Event\EventType.cs" />
     <Compile Include="Assets\Model\Module\Plus\MonoBehaviour\AutoDestroy.cs" />
+    <Compile Include="Assets\Model\Module\Plus\MonoBehaviour\Collider2DObserver.cs" />
+    <Compile Include="Assets\Model\Module\Plus\MonoBehaviour\ColliderObserver.cs" />
+    <Compile Include="Assets\Model\Module\Plus\MonoBehaviour\GOMark.cs" />
     <Compile Include="Assets\Model\Module\UI\CanvasConfig.cs" />
     <Compile Include="Assets\Model\Module\UI\LayerNames.cs" />
     <Compile Include="Assets\Model\Module\UI\UI.cs" />
