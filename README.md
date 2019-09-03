@@ -92,8 +92,6 @@ SceneUtil.LoadScene("Map", () =>
 
 - 原因: 我以前用过一段时间KBEngine, 这个是我参考KBEngine改的
 
-- 备注: 只需要Register, 不需要Deregister(), 自动Deregister
-
 - 演示: 我想在WorldComponent调用场景所有PlayerComponent的Jump方法
 
 - ```C#
@@ -101,6 +99,10 @@ SceneUtil.LoadScene("Map", () =>
   public class PlayerComponent : Component {
       void Awake() {
           this.Register("Jump");
+      }
+      
+      void OnDestroy() {
+      	this.Deregister();
       }
       
       public void Jump() {
