@@ -154,12 +154,6 @@ namespace " + scriptNamespace +
 		{
 
 		}
-
-		public override void Dispose()
-		{
-			if (IsDisposed) return;
-			base.Dispose();
-		}
 	}
 }
 ");

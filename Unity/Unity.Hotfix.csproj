@@ -126,7 +126,7 @@
     <Compile Include="Assets\Hotfix\Module\Plus\Entity\AudioEntity.cs" />
     <Compile Include="Assets\Hotfix\Module\Plus\Entity\EventEntity.cs" />
     <Compile Include="Assets\Hotfix\Module\Plus\Entity\NumericEntity.cs" />
-    <Compile Include="Assets\Hotfix\Module\Plus\Entity\SpriteHoldEntity.cs" />
+    <Compile Include="Assets\Hotfix\Module\Plus\Entity\ResHoldEntity.cs" />
     <Compile Include="Assets\Hotfix\Module\Plus\Entity\TipPanelEntity.cs" />
     <Compile Include="Assets\Hotfix\Module\Plus\Entity\UnitEntity.cs" />
     <Compile Include="Assets\Hotfix\Module\Plus\Event\EventMgr.cs" />

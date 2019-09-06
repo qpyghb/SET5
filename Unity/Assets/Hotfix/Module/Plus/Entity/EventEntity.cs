@@ -69,11 +69,5 @@ namespace ETHotfix
 		{
 
 		}
-
-		public override void Dispose()
-		{
-			if (IsDisposed) return;
-			base.Dispose();
-		}
 	}
 }

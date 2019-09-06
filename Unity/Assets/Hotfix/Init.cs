@@ -35,11 +35,18 @@ namespace ETHotfix
 				Game.Scene.AddComponent<ConfigComponent>();
 				ETModel.Game.Scene.GetComponent<ResourcesComponent>().UnloadBundle("config.unity3d");
 
-				Log.Debug($"config {ConfigUtil.GetJson<TestConfig>(2001)}");
+				// Log.Debug($"config {ConfigUtil.GetJson<TestConfig>(2001)}");
+				// UIUtil.OpenPanel<TipPanelEntity>(UIType.TipPanel)?.SetTip("提示信息");
+				// Game.EventSystem.Run(EventIdType.InitSceneStart);
 
-				UIUtil.OpenPanel<TipPanelEntity>(UIType.TipPanel)?.SetTip("提示信息");
+				#region Plus
 
-				Game.EventSystem.Run(EventIdType.InitSceneStart);
+				Game.Scene.AddComponent<AudioEntity>();
+				Game.Scene.AddComponent<EventEntity>();
+				Game.Scene.AddComponent<ResHoldEntity>();
+				Game.Scene.AddComponent<UnitEntity>();
+
+				#endregion
 			}
 			catch (Exception e)
 			{

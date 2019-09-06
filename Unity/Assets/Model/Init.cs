@@ -42,7 +42,13 @@ namespace ETModel
 
 				Game.Hotfix.GotoHotfix();
 
-				Game.EventSystem.Run(EventIdType.TestHotfixSubscribMonoEvent, "TestHotfixSubscribMonoEvent");
+				// Game.EventSystem.Run(EventIdType.TestHotfixSubscribMonoEvent, "TestHotfixSubscribMonoEvent");
+
+				#region Plus
+
+				Game.Scene.AddComponent<EventEntity>();
+
+				#endregion
 			}
 			catch (Exception e)
 			{
