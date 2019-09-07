@@ -78,11 +78,11 @@ namespace ETHotfix
 			unit.Parent = this;
 		}
 
-		public Entity Get(long id)
+		public T Get<T>(long id) where T : Entity
 		{
 			Entity unit;
 			this.idUnits.TryGetValue(id, out unit);
-			return unit;
+			return unit as T;
 		}
 
 		public void Remove(long id)

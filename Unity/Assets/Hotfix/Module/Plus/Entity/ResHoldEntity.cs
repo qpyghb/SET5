@@ -39,9 +39,10 @@ namespace ETHotfix
 		}
 	}
 
+	[HideInHierarchy]
 	public class ResHoldEntity : Entity
 	{
-		public ReferenceCollector Collector { get; set; }
+		private ReferenceCollector Collector { get; set; }
 
 		public void Awake()
 		{
@@ -63,6 +64,11 @@ namespace ETHotfix
 		public void OnDestroy()
 		{
 
+		}
+
+		public T Get<T>(string key) where T : class
+		{
+			return Collector.Get<T>(key);
 		}
 	}
 }
