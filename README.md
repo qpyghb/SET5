@@ -160,13 +160,6 @@ SceneUtil.LoadScene("Map", () =>
 
 - 在`Plugins/Demigiant`里，这里是免费版，够我用了
 
-### 8.4 行为树 - NPBehave
-
-- 在烟雨的博客看到的
-
-- 如果是帧同步行为树只需要在Unity, 如果是状态同步行为树需要用在服务端，NPBehave不依赖于MonoBehaviour
-
-
 
 ## 9. 快速标记AssetBundle
 
