@@ -1,1 +1,0 @@
-{"generatePath":"C:/Users/su/Documents/Respositories/ET-Plus/Server/Hotfix/Module/Demo","codeType":0,"className":null,"appType":67108991,"requestName":null,"responseName":null}

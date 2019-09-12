@@ -116,7 +116,6 @@
     <Compile Include="Assets\Editor\PlusEditor\BundleMarkEditor.cs" />
     <Compile Include="Assets\Editor\PlusEditor\GOMarkEditor.cs" />
     <Compile Include="Assets\Editor\PlusEditor\ScpWindow.cs" />
-    <Compile Include="Assets\Editor\PlusEditor\ServerCodeWindow.cs" />
     <Compile Include="Assets\Editor\Proto2CsEditor\InnerProto2CS.cs" />
     <Compile Include="Assets\Editor\Proto2CsEditor\Proto2CSEditor.cs" />
     <Compile Include="Assets\Editor\ReferenceCollectorEditor\ReferenceCollectorEditor.cs" />

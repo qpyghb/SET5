@@ -1,10 +1,9 @@
-﻿using ETModel;
-using UnityEngine;
+﻿using UnityEngine;
 using System;
 using System.Collections;
 using System.Collections.Generic;
 
-namespace ETHotfix
+namespace ETModel
 {
 	public static class GameObjectPool
 	{
@@ -26,16 +25,16 @@ namespace ETHotfix
 			}
 			else
 			{
-				return info.prefab.Instantiate();
+				return info.prefab.Instantiate().Name(info.prefab.name);
 			}
 		}
 
-		public static void Recycle(string name, GameObject go)
+		public static void Recycle(GameObject go)
 		{
 			if (go)
 			{
 				go.Disable();
-				GOInfo info = GetGOInfo(name);
+				GOInfo info = GetGOInfo(go.name);
 				goTable[info].Enqueue(go);
 			}
 		}

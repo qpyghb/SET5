@@ -85,6 +85,12 @@ namespace ETModel
 			return self;
 		}
 
+		public static GameObject Name(this GameObject self, string name)
+		{
+			self.name = name;
+			return self;
+		}
+
 		#endregion
 
 		#region Vector3

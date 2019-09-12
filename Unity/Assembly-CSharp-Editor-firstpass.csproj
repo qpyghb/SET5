@@ -742,10 +742,6 @@
       <Project>{CD311104-1830-B119-81B6-5DBEE2467FFB}</Project>
       <Name>Unity.Editor</Name>
     </ProjectReference>
-    <ProjectReference Include="UnityEditorMemo.Editor.csproj">
-      <Project>{5A121F60-E7DC-5A7A-82FD-312400056516}</Project>
-      <Name>UnityEditorMemo.Editor</Name>
-    </ProjectReference>
     <ProjectReference Include="Unity.Hotfix.csproj">
       <Project>{1066F652-6A89-D1C4-9881-1A19DF7AB80E}</Project>
       <Name>Unity.Hotfix</Name>
