@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using ETHotfix;
+using UnityEngine;
 
 namespace ETModel
 {
@@ -6,32 +7,32 @@ namespace ETModel
 	{
 		private void OnCollisionEnter2D(Collision2D collision)
 		{
-			Game.Scene.GetComponent<EventEntity>().eventInfoList.Add(new EventInfo(EventType.OnCollisionEnter2D, gameObject, collision));
+			Game.Scene.GetComponent<EventEntity>().Add(EventType.OnCollisionEnter2D, gameObject, collision);
 		}
 
 		private void OnCollisionStay2D(Collision2D collision)
 		{
-			Game.Scene.GetComponent<EventEntity>().eventInfoList.Add(new EventInfo(EventType.OnCollisionStay2D, gameObject, collision));
+			Game.Scene.GetComponent<EventEntity>().Add(EventType.OnCollisionStay2D, gameObject, collision);
 		}
 
 		private void OnCollisionExit2D(Collision2D collision)
 		{
-			Game.Scene.GetComponent<EventEntity>().eventInfoList.Add(new EventInfo(EventType.OnCollisionExit2D, gameObject, collision));
+			Game.Scene.GetComponent<EventEntity>().Add(EventType.OnCollisionExit2D, gameObject, collision);
 		}
 
-		private void OnTriggerEnter2D(Collider2D collision)
+		private void OnTriggerEnter2D(Collider2D collider)
 		{
-			Game.Scene.GetComponent<EventEntity>().eventInfoList.Add(new EventInfo(EventType.OnTriggerEnter2D, gameObject, collision));
+			Game.Scene.GetComponent<EventEntity>().Add(EventType.OnTriggerEnter2D, gameObject, collider);
 		}
 
-		private void OnTriggerStay2D(Collider2D collision)
+		private void OnTriggerStay2D(Collider2D collider)
 		{
-			Game.Scene.GetComponent<EventEntity>().eventInfoList.Add(new EventInfo(EventType.OnTriggerStay2D, gameObject, collision));
+			Game.Scene.GetComponent<EventEntity>().Add(EventType.OnTriggerStay2D, gameObject, collider);
 		}
 
-		private void OnTriggerExit2D(Collider2D collision)
+		private void OnTriggerExit2D(Collider2D collider)
 		{
-			Game.Scene.GetComponent<EventEntity>().eventInfoList.Add(new EventInfo(EventType.OnTriggerExit2D, gameObject, collision));
+			Game.Scene.GetComponent<EventEntity>().Add(EventType.OnTriggerExit2D, gameObject, collider);
 		}
 	}
 }

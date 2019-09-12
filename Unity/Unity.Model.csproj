@@ -8,7 +8,8 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <RootNamespace></RootNamespace>
+    <RootNamespace>
+    </RootNamespace>
     <ProjectGuid>{B4BF9894-F5D9-41C4-13E3-3F26F7700E29}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
@@ -504,6 +505,7 @@
     <Compile Include="Assets\Model\Module\Plus\Event\EventType.cs" />
     <Compile Include="Assets\Model\Module\Plus\Extension\PlusExtension.cs" />
     <Compile Include="Assets\Model\Module\Plus\Misc\TagType.cs" />
+    <Compile Include="Assets\Model\Module\Plus\MonoBehaviour\AnimatorObserver.cs" />
     <Compile Include="Assets\Model\Module\Plus\MonoBehaviour\AutoDestroy.cs" />
     <Compile Include="Assets\Model\Module\Plus\MonoBehaviour\Collider2DObserver.cs" />
     <Compile Include="Assets\Model\Module\Plus\MonoBehaviour\ColliderObserver.cs" />

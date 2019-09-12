@@ -1,5 +1,8 @@
 ﻿using ETModel;
 using UnityEngine;
+using System;
+using System.Collections;
+using System.Collections.Generic;
 
 namespace ETHotfix
 {
@@ -56,13 +59,13 @@ namespace ETHotfix
 			ETModel.EventEntity modelEventEntity = ETModel.Game.Scene.GetComponent<ETModel.EventEntity>();
 			if (modelEventEntity == null) return;
 
-			for (int i = 0; i < modelEventEntity.eventInfoList.Count; i++)
+			List<EventInfo> eventInfos = modelEventEntity.GetAll();
+			for (int i = 0; i < eventInfos.Count; i++)
 			{
-				EventInfo info = modelEventEntity.eventInfoList[i];
-				EventMgr.Send(info.name, info.args);
+				EventMgr.Send(eventInfos[i].eventName, eventInfos[i].args);
 			}
 
-			modelEventEntity.eventInfoList.Clear();
+			modelEventEntity.Clear();
 		}
 
 		public void OnDestroy()

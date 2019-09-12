@@ -40,21 +40,21 @@ namespace ETModel
 		}
 	}
 
-	public class EventInfo
+	public struct EventInfo
 	{
-		public string name;
+		public string eventName;
 		public object[] args;
 
-		public EventInfo(string name, params object[] args)
+		public EventInfo(string eventName, object[] args)
 		{
-			this.name = name;
+			this.eventName = eventName;
 			this.args = args;
 		}
 	}
 
 	public class EventEntity : Entity
 	{
-		public List<EventInfo> eventInfoList = new List<EventInfo>();
+		private List<EventInfo> eventInfoList = new List<EventInfo>();
 
 		public void Awake()
 		{
@@ -80,6 +80,21 @@ namespace ETModel
 		{
 			if (IsDisposed) return;
 			base.Dispose();
+		}
+
+		public void Add(string eventName, params object[] args)
+		{
+			eventInfoList.Add(new EventInfo(eventName, args));
+		}
+
+		public List<EventInfo> GetAll()
+		{
+			return eventInfoList;
+		}
+
+		public void Clear()
+		{
+			eventInfoList.Clear();
 		}
 	}
 }
