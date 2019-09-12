@@ -261,7 +261,7 @@ namespace " + scriptNamespace +
 			}
 
 			// 为了保证创建并刷新配置文件
-			await Task.Delay(100);
+			await Task.Delay(500);
 
 			// 加入到Config.prefab
 			GameObject configPrefab = AssetDatabase.LoadAssetAtPath<GameObject>("Assets/Bundles/Independent/Config.prefab");
