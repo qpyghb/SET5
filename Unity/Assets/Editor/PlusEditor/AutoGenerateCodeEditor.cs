@@ -127,6 +127,7 @@ namespace " + scriptNamespace +
 		$"		public override void Destroy({className} self)" +
 		@"
 		{
+			self.Deregister();
 			self.OnDestroy();
 		}
 	}

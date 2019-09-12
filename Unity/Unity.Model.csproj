@@ -373,43 +373,6 @@
     <Compile Include="Assets\Model\Module\Message\RpcException.cs" />
     <Compile Include="Assets\Model\Module\Message\Session.cs" />
     <Compile Include="Assets\Model\Module\Message\SessionCallbackComponent.cs" />
-    <Compile Include="Assets\Model\Module\NPBehave\Blackboard.cs" />
-    <Compile Include="Assets\Model\Module\NPBehave\Clock.cs" />
-    <Compile Include="Assets\Model\Module\NPBehave\Composite\Composite.cs" />
-    <Compile Include="Assets\Model\Module\NPBehave\Composite\Parallel.cs" />
-    <Compile Include="Assets\Model\Module\NPBehave\Composite\RandomSelector.cs" />
-    <Compile Include="Assets\Model\Module\NPBehave\Composite\RandomSequence.cs" />
-    <Compile Include="Assets\Model\Module\NPBehave\Composite\Selector.cs" />
-    <Compile Include="Assets\Model\Module\NPBehave\Composite\Sequence.cs" />
-    <Compile Include="Assets\Model\Module\NPBehave\Container.cs" />
-    <Compile Include="Assets\Model\Module\NPBehave\Debugger.cs" />
-    <Compile Include="Assets\Model\Module\NPBehave\Decorator\BlackboardCondition.cs" />
-    <Compile Include="Assets\Model\Module\NPBehave\Decorator\BlackboardQuery.cs" />
-    <Compile Include="Assets\Model\Module\NPBehave\Decorator\Condition.cs" />
-    <Compile Include="Assets\Model\Module\NPBehave\Decorator\Cooldown.cs" />
-    <Compile Include="Assets\Model\Module\NPBehave\Decorator\Decorator.cs" />
-    <Compile Include="Assets\Model\Module\NPBehave\Decorator\Failer.cs" />
-    <Compile Include="Assets\Model\Module\NPBehave\Decorator\Inverter.cs" />
-    <Compile Include="Assets\Model\Module\NPBehave\Decorator\Observer.cs" />
-    <Compile Include="Assets\Model\Module\NPBehave\Decorator\ObservingDecorator.cs" />
-    <Compile Include="Assets\Model\Module\NPBehave\Decorator\Random.cs" />
-    <Compile Include="Assets\Model\Module\NPBehave\Decorator\Repeater.cs" />
-    <Compile Include="Assets\Model\Module\NPBehave\Decorator\Service.cs" />
-    <Compile Include="Assets\Model\Module\NPBehave\Decorator\Succeeder.cs" />
-    <Compile Include="Assets\Model\Module\NPBehave\Decorator\TimeMax.cs" />
-    <Compile Include="Assets\Model\Module\NPBehave\Decorator\TimeMin.cs" />
-    <Compile Include="Assets\Model\Module\NPBehave\Decorator\WaitForCondition.cs" />
-    <Compile Include="Assets\Model\Module\NPBehave\Exception.cs" />
-    <Compile Include="Assets\Model\Module\NPBehave\Node.cs" />
-    <Compile Include="Assets\Model\Module\NPBehave\Operator.cs" />
-    <Compile Include="Assets\Model\Module\NPBehave\Root.cs" />
-    <Compile Include="Assets\Model\Module\NPBehave\Stops.cs" />
-    <Compile Include="Assets\Model\Module\NPBehave\Task\Action.cs" />
-    <Compile Include="Assets\Model\Module\NPBehave\Task\NavMoveTo.cs" />
-    <Compile Include="Assets\Model\Module\NPBehave\Task\Task.cs" />
-    <Compile Include="Assets\Model\Module\NPBehave\Task\Wait.cs" />
-    <Compile Include="Assets\Model\Module\NPBehave\Task\WaitUntilStopped.cs" />
-    <Compile Include="Assets\Model\Module\NPBehave\UnityContext.cs" />
     <Compile Include="Assets\Model\Module\Numeric\INumericWatcher.cs" />
     <Compile Include="Assets\Model\Module\Numeric\NumericChangeEvent_NotifyWatcher.cs" />
     <Compile Include="Assets\Model\Module\Numeric\NumericComponent.cs" />
@@ -539,10 +502,20 @@
     <Compile Include="Assets\Model\Module\Pathfinding\Recast\WindowsStoreCompatibility.cs" />
     <Compile Include="Assets\Model\Module\Plus\Entity\EventEntity.cs" />
     <Compile Include="Assets\Model\Module\Plus\Event\EventType.cs" />
+    <Compile Include="Assets\Model\Module\Plus\Extension\PlusExtension.cs" />
+    <Compile Include="Assets\Model\Module\Plus\Misc\TagType.cs" />
     <Compile Include="Assets\Model\Module\Plus\MonoBehaviour\AutoDestroy.cs" />
     <Compile Include="Assets\Model\Module\Plus\MonoBehaviour\Collider2DObserver.cs" />
     <Compile Include="Assets\Model\Module\Plus\MonoBehaviour\ColliderObserver.cs" />
+    <Compile Include="Assets\Model\Module\Plus\MonoBehaviour\DelayDestroy.cs" />
+    <Compile Include="Assets\Model\Module\Plus\MonoBehaviour\DelayRecycle.cs" />
+    <Compile Include="Assets\Model\Module\Plus\MonoBehaviour\FSMClear.cs" />
+    <Compile Include="Assets\Model\Module\Plus\MonoBehaviour\FXDestroy.cs" />
+    <Compile Include="Assets\Model\Module\Plus\MonoBehaviour\FXRecycle.cs" />
     <Compile Include="Assets\Model\Module\Plus\MonoBehaviour\GOMark.cs" />
+    <Compile Include="Assets\Model\Module\Plus\MonoBehaviour\GOPoolName.cs" />
+    <Compile Include="Assets\Model\Module\Plus\Pool\GameObjectPool.cs" />
+    <Compile Include="Assets\Model\Module\Plus\Util\ResourceUtil.cs" />
     <Compile Include="Assets\Model\Module\UI\CanvasConfig.cs" />
     <Compile Include="Assets\Model\Module\UI\LayerNames.cs" />
     <Compile Include="Assets\Model\Module\UI\UI.cs" />
@@ -813,6 +786,12 @@
     </Reference>
     <Reference Include="Pathfinding.Poly2Tri">
       <HintPath>C:/Users/Swick/Documents/Respositories/ET-Plus/Unity/Assets/Plugins/AstarPathfindingProject/Poly2Tri/Pathfinding.Poly2Tri.dll</HintPath>
+    </Reference>
+    <Reference Include="BehaviorDesigner.Editor">
+      <HintPath>C:/Users/Swick/Documents/Respositories/ET-Plus/Unity/Assets/Plugins/Behavior Designer/Editor/BehaviorDesigner.Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="BehaviorDesigner.Runtime">
+      <HintPath>C:/Users/Swick/Documents/Respositories/ET-Plus/Unity/Assets/Plugins/Behavior Designer/Runtime/BehaviorDesigner.Runtime.dll</HintPath>
     </Reference>
     <Reference Include="DOTween">
       <HintPath>C:/Users/Swick/Documents/Respositories/ET-Plus/Unity/Assets/Plugins/Demigiant/DOTween/DOTween.dll</HintPath>

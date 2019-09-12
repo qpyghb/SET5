@@ -135,7 +135,6 @@
     <Compile Include="Assets\Hotfix\Module\Plus\Factory\UIFactory.cs" />
     <Compile Include="Assets\Hotfix\Module\Plus\Factory\UnitEntityFactory.cs" />
     <Compile Include="Assets\Hotfix\Module\Plus\Util\ConfigUtil.cs" />
-    <Compile Include="Assets\Hotfix\Module\Plus\Util\ResourceUtil.cs" />
     <Compile Include="Assets\Hotfix\Module\Plus\Util\SceneUtil.cs" />
     <Compile Include="Assets\Hotfix\Module\Plus\Util\UIUtil.cs" />
     <Compile Include="Assets\Hotfix\Module\UI\IUIFactory.cs" />
@@ -394,6 +393,12 @@
     </Reference>
     <Reference Include="Pathfinding.Poly2Tri">
       <HintPath>C:/Users/Swick/Documents/Respositories/ET-Plus/Unity/Assets/Plugins/AstarPathfindingProject/Poly2Tri/Pathfinding.Poly2Tri.dll</HintPath>
+    </Reference>
+    <Reference Include="BehaviorDesigner.Editor">
+      <HintPath>C:/Users/Swick/Documents/Respositories/ET-Plus/Unity/Assets/Plugins/Behavior Designer/Editor/BehaviorDesigner.Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="BehaviorDesigner.Runtime">
+      <HintPath>C:/Users/Swick/Documents/Respositories/ET-Plus/Unity/Assets/Plugins/Behavior Designer/Runtime/BehaviorDesigner.Runtime.dll</HintPath>
     </Reference>
     <Reference Include="DOTween">
       <HintPath>C:/Users/Swick/Documents/Respositories/ET-Plus/Unity/Assets/Plugins/Demigiant/DOTween/DOTween.dll</HintPath>

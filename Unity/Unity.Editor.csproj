@@ -111,8 +111,6 @@
     <Compile Include="Assets\Editor\Helper\EditorResHelper.cs" />
     <Compile Include="Assets\Editor\ILRuntimeEditor\ILRuntimeCLRBinding.cs" />
     <Compile Include="Assets\Editor\IngameConsoleEditor\DebugLogManagerEditor.cs" />
-    <Compile Include="Assets\Editor\NPBehaveEditor\DebuggerEditor.cs" />
-    <Compile Include="Assets\Editor\NPBehaveEditor\DebuggerWindow.cs" />
     <Compile Include="Assets\Editor\PlusEditor\AlwaysLoadSceneWindow.cs" />
     <Compile Include="Assets\Editor\PlusEditor\AutoGenerateCodeEditor.cs" />
     <Compile Include="Assets\Editor\PlusEditor\BundleMarkEditor.cs" />
@@ -381,6 +379,12 @@
     </Reference>
     <Reference Include="Pathfinding.Poly2Tri">
       <HintPath>C:/Users/Swick/Documents/Respositories/ET-Plus/Unity/Assets/Plugins/AstarPathfindingProject/Poly2Tri/Pathfinding.Poly2Tri.dll</HintPath>
+    </Reference>
+    <Reference Include="BehaviorDesigner.Editor">
+      <HintPath>C:/Users/Swick/Documents/Respositories/ET-Plus/Unity/Assets/Plugins/Behavior Designer/Editor/BehaviorDesigner.Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="BehaviorDesigner.Runtime">
+      <HintPath>C:/Users/Swick/Documents/Respositories/ET-Plus/Unity/Assets/Plugins/Behavior Designer/Runtime/BehaviorDesigner.Runtime.dll</HintPath>
     </Reference>
     <Reference Include="DOTween">
       <HintPath>C:/Users/Swick/Documents/Respositories/ET-Plus/Unity/Assets/Plugins/Demigiant/DOTween/DOTween.dll</HintPath>
