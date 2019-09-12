@@ -85,17 +85,12 @@ namespace ETHotfix
 			return unit as T;
 		}
 
-		public void Remove(long id, bool isDestroy = true)
+		public void Remove(long id)
 		{
 			Entity unit;
 			idUnits.TryGetValue(id, out unit);
 			if (unit != null)
 			{
-				if (isDestroy)
-				{
-					unit.GameObject?.Destroy();
-				}
-
 				unit?.Dispose();
 				idUnits.Remove(id);
 			}
