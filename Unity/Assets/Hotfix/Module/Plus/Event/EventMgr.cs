@@ -41,7 +41,7 @@ namespace ETHotfix
 		{
 			if (eventTable.ContainsKey(key) == false)
 			{
-				throw new Exception($"调用方法前, 没有注册此方法: {key.ToString()}");
+				return;
 			}
 
 			foreach (var item in eventTable[key])

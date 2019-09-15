@@ -155,6 +155,11 @@ namespace " + scriptNamespace +
 		{
 
 		}
+
+		public void OnEvent(EventKey key, object[] args)
+		{
+			
+		}
 	}
 }
 ");
