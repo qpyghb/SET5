@@ -1,5 +1,6 @@
 ﻿using ETHotfix;
 using UnityEngine;
+using System;
 
 namespace ETModel
 {
@@ -7,7 +8,7 @@ namespace ETModel
 	{
 		public void Send(string msg)
 		{
-			Game.Scene.GetComponent<EventEntity>().Add(msg);
+			Game.Scene.GetComponent<EventEntity>().Add((EventKey)(Enum.Parse(typeof(EventKey), msg)));
 		}
 	}
 }

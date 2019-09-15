@@ -42,12 +42,12 @@ namespace ETModel
 
 	public struct EventInfo
 	{
-		public string eventName;
+		public EventKey key;
 		public object[] args;
 
-		public EventInfo(string eventName, object[] args)
+		public EventInfo(EventKey key, object[] args)
 		{
-			this.eventName = eventName;
+			this.key = key;
 			this.args = args;
 		}
 	}
@@ -82,9 +82,9 @@ namespace ETModel
 			base.Dispose();
 		}
 
-		public void Add(string eventName, params object[] args)
+		public void Add(EventKey key, params object[] args)
 		{
-			eventInfoList.Add(new EventInfo(eventName, args));
+			eventInfoList.Add(new EventInfo(key, args));
 		}
 
 		public List<EventInfo> GetAll()

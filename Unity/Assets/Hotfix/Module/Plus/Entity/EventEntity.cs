@@ -62,7 +62,7 @@ namespace ETHotfix
 			List<EventInfo> eventInfos = modelEventEntity.GetAll();
 			for (int i = 0; i < eventInfos.Count; i++)
 			{
-				EventMgr.Send(eventInfos[i].eventName, eventInfos[i].args);
+				EventMgr.Send(eventInfos[i].key, eventInfos[i].args);
 			}
 
 			modelEventEntity.Clear();

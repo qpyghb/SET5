@@ -93,6 +93,10 @@ namespace ETHotfix
 			{
 				unit?.Dispose();
 				idUnits.Remove(id);
+				if (unit.GameObject)
+				{
+					GameObject.Destroy(unit.GameObject);
+				}
 			}
 			else
 			{

@@ -501,7 +501,7 @@
     <Compile Include="Assets\Model\Module\Pathfinding\Recast\TriangleMeshNode.cs" />
     <Compile Include="Assets\Model\Module\Pathfinding\Recast\WindowsStoreCompatibility.cs" />
     <Compile Include="Assets\Model\Module\Plus\Entity\EventEntity.cs" />
-    <Compile Include="Assets\Model\Module\Plus\Event\EventType.cs" />
+    <Compile Include="Assets\Model\Module\Plus\Event\EventKey.cs" />
     <Compile Include="Assets\Model\Module\Plus\Extension\PlusExtension.cs" />
     <Compile Include="Assets\Model\Module\Plus\Misc\TagType.cs" />
     <Compile Include="Assets\Model\Module\Plus\MonoBehaviour\AnimatorObserver.cs" />

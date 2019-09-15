@@ -2,39 +2,39 @@
 
 namespace ETModel
 {
-	public class EventType
+	public enum EventKey
 	{
 		#region Collider2dObserver
 
 		/// <summary>
 		/// GameObject, Collision2D
 		/// </summary>
-		public const string OnCollisionEnter2D = "OnCollisionEnter2D";
+		OnCollisionEnter2D,
 
 		/// <summary>
 		/// GameObject, Collision2D
 		/// </summary>
-		public const string OnCollisionStay2D = "OnCollisionStay2D";
+		OnCollisionStay2D,
 
 		/// <summary>
 		/// GameObject, Collision2D
 		/// </summary>
-		public const string OnCollisionExit2D = "OnCollisionExit2D";
+		OnCollisionExit2D,
 
 		/// <summary>
 		/// GameObject, Collider2D
 		/// </summary>
-		public const string OnTriggerEnter2D = "OnTriggerEnter2D";
+		OnTriggerEnter2D,
 
 		/// <summary>
 		/// GameObject, Collider2D
 		/// </summary>
-		public const string OnTriggerStay2D = "OnTriggerStay2D";
+		OnTriggerStay2D,
 
 		/// <summary>
 		/// GameObject, Collider2D
 		/// </summary>
-		public const string OnTriggerExit2D = "OnTriggerExit2D";
+	    OnTriggerExit2D,
 
 		#endregion
 
@@ -43,32 +43,32 @@ namespace ETModel
 		/// <summary>
 		/// GameObject, Collision
 		/// </summary>
-		public const string OnCollisionEnter = "OnCollisionEnter";
+		OnCollisionEnter,
 
 		/// <summary>
 		/// GameObject, Collision
 		/// </summary>
-		public const string OnCollisionStay = "OnCollisionStay";
+		OnCollisionStay,
 
 		/// <summary>
 		/// GameObject, Collision
 		/// </summary>
-		public const string OnCollisionExit = "OnCollisionExit";
+		OnCollisionExit,
 
 		/// <summary>
 		/// GameObject, Collider
 		/// </summary>
-		public const string OnTriggerEnter = "OnTriggerEnter";
+		OnTriggerEnter,
 
 		/// <summary>
 		/// GameObject, Collider
 		/// </summary>
-		public const string OnTriggerStay = "OnTriggerStay";
+		OnTriggerStay,
 
 		/// <summary>
 		/// GameObject, Collider
 		/// </summary>
-		public const string OnTriggerExit = "OnTriggerExit";
+		OnTriggerExit,
 
 		#endregion
 	}

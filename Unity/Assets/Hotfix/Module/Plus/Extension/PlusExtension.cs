@@ -22,9 +22,9 @@ namespace ETHotfix
 
 		#region object
 
-		public static void Register(this object self, string eventName)
+		public static void Register(this object self, EventKey eventType, OnEvent callback)
 		{
-			EventMgr.Register(self, eventName);
+			EventMgr.Register(eventType, self, callback);
 		}
 
 		public static void Deregister(this object self)
@@ -32,14 +32,9 @@ namespace ETHotfix
 			EventMgr.Deregister(self);
 		}
 
-		public static void Send(this object self, string eventName, params object[] args)
+		public static void Send(this object self, EventKey eventType, params object[] args)
 		{
-			EventMgr.Send(eventName, args);
-		}
-
-		public static object[] Call(this object self, string eventName, params object[] args)
-		{
-			return EventMgr.Call(eventName, args);
+			EventMgr.Send(eventType, args);
 		}
 
 		#endregion

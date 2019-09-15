@@ -119,14 +119,5 @@ namespace ETModel
 		}
 
 		#endregion
-
-		#region Enum
-
-		public static string GetName(this Enum self)
-		{
-			return Enum.GetName(self.GetType(), self);
-		}
-
-		#endregion
 	}
 }

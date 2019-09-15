@@ -130,7 +130,6 @@
     <Compile Include="Assets\Hotfix\Module\Plus\Entity\TipPanelEntity.cs" />
     <Compile Include="Assets\Hotfix\Module\Plus\Entity\UnitEntity.cs" />
     <Compile Include="Assets\Hotfix\Module\Plus\Event\EventMgr.cs" />
-    <Compile Include="Assets\Hotfix\Module\Plus\Event\EventType.cs" />
     <Compile Include="Assets\Hotfix\Module\Plus\Extension\PlusExtension.cs" />
     <Compile Include="Assets\Hotfix\Module\Plus\Factory\UIFactory.cs" />
     <Compile Include="Assets\Hotfix\Module\Plus\Factory\UnitEntityFactory.cs" />
