@@ -8,6 +8,7 @@ namespace ETHotfix
 		public static async ETVoid LoadScene(string sceneName, Action onLoaded = null)
 		{
 			Game.Scene.GetComponent<UnitEntity>().RemoveAll();
+			EventMgr.Send(EventKey.StartLoadScene);
 
 			// 加载场景资源
 			await ETModel.Game.Scene.GetComponent<ResourcesComponent>().LoadBundleAsync(sceneName.StringToAB());
@@ -18,6 +19,7 @@ namespace ETHotfix
 				await sceneChangeComponent.ChangeSceneAsync(sceneName);
 			}
 
+			EventMgr.Send(EventKey.EndLoadScene);
 			onLoaded?.Invoke();
 		}
 	}

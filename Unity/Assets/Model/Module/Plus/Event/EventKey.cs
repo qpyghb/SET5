@@ -71,5 +71,16 @@ namespace ETModel
 		OnTriggerExit,
 
 		#endregion
+
+		#region Scene
+
+		StartLoadScene,
+		EndLoadScene,
+
+		#endregion
+
+		#region Custom
+
+		#endregion
 	}
 }

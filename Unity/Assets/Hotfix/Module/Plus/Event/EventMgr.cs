@@ -1,8 +1,8 @@
 ﻿using ETModel;
 using UnityEngine;
 using System;
-using System.Reflection;
 using System.Collections.Generic;
+using System.Linq;
 
 
 namespace ETHotfix
@@ -39,14 +39,19 @@ namespace ETHotfix
 
 		public static void Send(EventKey key, params object[] args)
 		{
-			if (eventTable.ContainsKey(key) == false)
+			if (eventTable.ContainsKey(key) == false || eventTable[key] == null)
 			{
 				return;
 			}
 
-			foreach (var item in eventTable[key])
+			Dictionary<object, OnEvent> objTable = eventTable[key];
+			List<object> objList = objTable.Keys.ToList();
+			for (int i = 0; i < objList.Count; i++)
 			{
-				item.Value?.Invoke(key, args);
+				if (objTable.ContainsKey(objList[i]))
+				{
+					objTable[objList[i]]?.Invoke(key, args);
+				}
 			}
 		}
 	}
