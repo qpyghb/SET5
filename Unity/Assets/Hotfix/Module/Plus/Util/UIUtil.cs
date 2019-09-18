@@ -35,9 +35,9 @@ namespace ETHotfix
 
 		public static void CloseAllPanel()
 		{
-			foreach (var uiName in uiNameList)
+			for (int i = 0; i < uiNameList.Count; i++)
 			{
-				ClosePanel(uiName);
+				ClosePanel(uiNameList[i]);
 			}
 		}
 	}
