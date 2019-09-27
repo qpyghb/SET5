@@ -119,5 +119,14 @@ namespace ETModel
 		}
 
 		#endregion
+
+		#region Texture2D
+
+		public static Sprite ToSprite(this Texture2D self)
+		{
+			return Sprite.Create(self, new Rect(0, 0, self.width, self.height), Vector2.one * 0.5f);
+		}
+
+		#endregion
 	}
 }

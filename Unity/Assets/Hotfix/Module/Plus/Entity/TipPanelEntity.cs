@@ -55,11 +55,11 @@ namespace ETHotfix
 		public void Start()
 		{
 			// 动画
-			tipText.transform.DOLocalMoveY(300f, 0.6f).From(200f);
-			tipText.DoFade(600, new Color(1f, 1f, 1f, 0.3f), Color.white).Coroutine();
+			tipText.transform.DOLocalMoveY(Screen.height / 2.5f, 1f).From(Screen.height / 7f);
+			tipText.DoFade(500, new Color(1f, 1f, 1f, 0.3f), Color.white).Coroutine();
 
 			// 自动关闭
-			this.Delay(1200, () =>
+			this.Delay(1500, () =>
 			{
 				UIUtil.ClosePanel("TipPanel");
 			}).Coroutine();
@@ -78,6 +78,11 @@ namespace ETHotfix
 		public void SetTip(string tip)
 		{
 			tipText.text = tip;
+		}
+
+		public static void ShowTip(string tip)
+		{
+			UIUtil.OpenPanel<TipPanelEntity>(UIType.TipPanel)?.SetTip(tip);
 		}
 	}
 }
